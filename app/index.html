@@ -10,6 +10,7 @@
     <link rel="shortcut icon" href="../favicon.ico">
 		<link rel="stylesheet" type="text/css" href="styles/default.css" />
 		<link rel="stylesheet" type="text/css" href="styles/component.css" />
+    <link rel="stylesheet" type="text/css" href="styles/c.css" />
     <!-- endinject -->
 
     <!-- bower:css -->
@@ -21,7 +22,7 @@
         <div class="container" id="bodyDiv">
     			<div class="main clearfix">
     				<nav id="menu" class="nav">
-    					<ul>
+    					<ul ng-controller="HomeController">
     						<li>
     							<a href="#">
     								<span class="icon">
@@ -30,7 +31,7 @@
     								<span>Inicio</span>
     							</a>
     						</li>
-    						<li ng-controller="HomeController" ng-show="isAdmin()">
+    						<li ng-show="isAdmin()">
     							<a href="#">
     								<span class="icon">
     									<i aria-hidden="true" class="icon-services"></i>
@@ -38,7 +39,7 @@
     								<span>Tablas</span>
     							</a>
     						</li>
-    						<li ng-controller="HomeController" ng-show="isAdmin()">
+    						<li ng-show="isAdmin()">
     							<a href="#">
     								<span class="icon">
     									<i aria-hidden="true" class="icon-portfolio"></i>
@@ -46,7 +47,7 @@
     								<span>Estadísticas</span>
     							</a>
     						</li>
-    						<li ng-controller="HomeController" ng-show="isAdmin()">
+    						<li ng-show="isAdmin()">
     							<a href="#">
     								<span class="icon">
     									<i aria-hidden="true" class="icon-team"></i>
@@ -55,7 +56,7 @@
     							</a>
     						</li>
     						<li>
-    							<a href="#">
+    							<a href="#/about">
     								<span class="icon">
     									<i aria-hidden="true" class="icon-blog"></i>
     								</span>
@@ -63,7 +64,7 @@
     							</a>
     						</li>
     						<li>
-    							<a href="#">
+    							<a href="#/contact">
     								<span class="icon">
     									<i aria-hidden="true" class="icon-contact"></i>
     								</span>
@@ -73,7 +74,7 @@
     					</ul>
     				</nav>
     			</div>
-          <div class="container">
+          <div>
             <div ui-view></div>
         </div>
     		</div>
@@ -123,7 +124,6 @@
 
   <script src="/ngstorage/ngStorage.js"></script>
 
-  <script src="/bootstrap/dist/js/bootstrap.js"></script>
 
   <!-- endinject -->
 
@@ -134,8 +134,6 @@
   <script src="scripts/controllers/NavbarController.js"></script>
   <script src="scripts/services/AuthService.js"></script>
   <script src="scripts/services/HomeService.js"></script>
-  <script src="scripts/js-image-slider.js" type="text/javascript"></script>
   <script src="scripts/modernizr.custom.js"></script>
-  <script src="scripts/phone.js"></script>
   <!-- endinject -->
 </html>

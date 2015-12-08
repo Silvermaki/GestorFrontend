@@ -4,11 +4,10 @@
 }
 
 .btn-xxlarge{
-  width:400px;
+  width:40%;
   height:100px;
-  margin-top:50px;
   border-radius: 15px !important;
-  background-color: #004C70 !important;
+  background-color: #2E9AFE !important;
 }
 
 .middlealign{
@@ -32,6 +31,378 @@ body{
 #bodyDiv{
   height:100vh;
   background-image: url("../images/background.jpg") !important;
-  background-size: contain;
-  background-repeat: repeat-y;
+  background-repeat: repeat;
+}
+
+.custom-jumbotron{
+  margin-left: 5%;
+  margin-right: 5%;
+  color:white !important;
+  text-align: center;
+  background-color: #004C70 !important;
+}
+
+h1 {
+    font-family:'Questrial', Verdana, sans-serif;
+    text-align:center;
+    font-size:40px;
+    padding:0;
+    margin:0 0 20px 0;
+    position:relative;
+    color:#8C8C8C;
+}
+/** have a nice ampersand **/
+ h1:after {
+    font-size:25px;
+    color:#D6CFCB;
+    content:'&';
+    text-align:center;
+    display:block;
+    width:100%;
+    font-family:'Alice', Verdana, serif;
+    text-shadow: 0px 1px 0px #fff;
+}
+/** create the gradient bottom **/
+ h1:before {
+    position:absolute;
+    bottom:15px;
+    content:' ';
+    text-align:center;
+    display:block;
+    height:2px;
+    width:100%;
+    background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(182, 180, 180, 0.7) 42%, rgba(180, 178, 178, 0) 43%, rgba(168, 166, 166, 0) 50%, rgba(180, 178, 178, 0) 57%, rgba(182, 180, 180, 0.7) 58%, rgba(238, 237, 237, 0.3) 90%, rgba(255, 255, 255, 0) 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(42%, rgba(182, 180, 180, 0.7)), color-stop(43%, rgba(180, 178, 178, 0)), color-stop(50%, rgba(168, 166, 166, 0)), color-stop(57%, rgba(180, 178, 178, 0)), color-stop(58%, rgba(182, 180, 180, 0.7)), color-stop(90%, rgba(238, 237, 237, 0.3)), color-stop(100%, rgba(255, 255, 255, 0)));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(182, 180, 180, 0.7) 42%, rgba(180, 178, 178, 0) 43%, rgba(168, 166, 166, 0) 50%, rgba(180, 178, 178, 0) 57%, rgba(182, 180, 180, 0.7) 58%, rgba(238, 237, 237, 0.3) 90%, rgba(255, 255, 255, 0) 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(182, 180, 180, 0.7) 42%, rgba(180, 178, 178, 0) 43%, rgba(168, 166, 166, 0) 50%, rgba(180, 178, 178, 0) 57%, rgba(182, 180, 180, 0.7) 58%, rgba(238, 237, 237, 0.3) 90%, rgba(255, 255, 255, 0) 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(182, 180, 180, 0.7) 42%, rgba(180, 178, 178, 0) 43%, rgba(168, 166, 166, 0) 50%, rgba(180, 178, 178, 0) 57%, rgba(182, 180, 180, 0.7) 58%, rgba(238, 237, 237, 0.3) 90%, rgba(255, 255, 255, 0) 100%);
+    /* IE10+ */
+    background: linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(182, 180, 180, 0.7) 42%, rgba(180, 178, 178, 0) 43%, rgba(168, 166, 166, 0) 50%, rgba(180, 178, 178, 0) 57%, rgba(182, 180, 180, 0.7) 58%, rgba(238, 237, 237, 0.3) 90%, rgba(255, 255, 255, 0) 100%);
+    /* W3C */
+}
+
+figure {
+    float: left;
+    height: 6em;
+    margin: 1.5em;
+    width: 12em;
+    -webkit-transform: perspective(500);
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: .5s;
+}
+figure:hover {
+    -webkit-transform: perspective(500) rotateX(90deg) translateY(-3em) translateZ(3em);
+}
+img {
+    background-color: #222;
+    box-shadow: 0 20px 15px -10px hsla(0,0%,0%,.25);
+    display: block;
+    height: 100%;
+    -webkit-transition: .5s;
+}
+figure:hover img {
+    box-shadow: none;
+}
+figcaption {
+    background-color: #222;
+    color: #fff;
+    padding: 1.5em;
+    -webkit-transform: rotateX(-90deg);
+    -webkit-transform-origin: 100% 0;
+    -webkit-transition: .5s;
+}
+figure:hover figcaption {
+    box-shadow: 0 20px 15px -10px hsla(0,0%,0%,.25);
+}
+h3 {
+    font-weight: bold;
+}​
+
+.macbook {
+  width: 300px;
+  margin: 50px auto;
+  -webkit-perspective: 750;
+  -webkit-perspective-origin: 50% bottom;
+  -webkit-transform-style: preserve-3d;
+  -moz-perspective: 750px;
+  -moz-perspective-origin: 50% bottom;
+  -moz-transform-style: preserve-3d;
+  perspective: 750;
+  perspective-origin: 50% bottom;
+  transform-style: preserve-3d;
+}
+.macbook-lid {
+  width: 80%;
+  margin: 0 auto;
+  -webkit-transform-origin: 50% bottom;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-origin: 50% bottom;
+  -moz-transform-style: preserve-3d;
+  transform-origin: 50% bottom;
+  transform-style: preserve-3d;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  transition: all 1s;
+}
+.macbook-lid:before {
+  display: block;
+  content: '';
+  width: 92%;
+  margin: 0 auto;
+  padding: 2% 3% 0 3%;
+  background-color: #D3D1D2;
+  border-radius: 10px 10px 0 0;
+  -webkit-transform-origin: 50% bottom;
+  -webkit-transform: rotate3d(1, 0, 0, 90deg);
+  -moz-transform-origin: 50% bottom;
+  -moz-transform: rotate3d(1, 0, 0, 90deg);
+  transform-origin: 50% bottom;
+  transform: rotate3d(1, 0, 0, 90deg);
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  transition: all 1s;
+}
+.macbook-screen {
+  position: relative;
+  background-color: #353535;
+  margin: 0 auto;
+  padding: 3%;
+  border-radius: 5px 5px 0 0;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  transition: all 1s;
+}
+.macbook-screen:before {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 2%;
+  left: 49%;
+  width: 1%;
+  padding-top: 1%;
+  background-color: #000;
+}
+.macbook-content {
+  position: relative;
+  overflow: hidden;
+  background-color: #323C4D;
+  box-shadow: inset 0px 0px 6px #222;
+}
+.macbook-content:before {
+  display: block;
+  content: '';
+  width: 1px;
+  padding-top: 60%;
+  float: left;
+}
+.macbook-content:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+.macbook:not(:hover) .macbook-lid {
+  -webkit-transform: rotate3d(-1, 0, 0, 91deg);
+  -moz-transform: rotate3d(-1, 0, 0, 91deg);
+  transform: rotate3d(-1, 0, 0, 91deg);
+}
+.macbook:not(:hover) .macbook-lid:before {
+  width: 94%;
+}
+
+
+
+
+
+
+.macbook-base {
+  width: 100%;
+  overflow: hidden;
+  background-color: #D3D1D2;
+  border-radius: 2px 2px 10px 10px;
+}
+.macbook-base:before {
+  display: block;
+  content: '';
+  width: 30%;
+  margin: 0 auto 1% auto;
+  padding-top: 1.5%;
+  background: #B0B0B0;
+  border-radius: 0 0 10px 10px;
+}
+.macbook-base:after {
+  display: block;
+  content: '';
+  padding-top: 1%;
+  background-color: #B3B3B3;
+}
+
+
+
+.macbook-apps, .macbook-app {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.macbook-apps {
+  width: 60%;
+  position: absolute;
+  bottom: -20%;
+  left: 50%;
+  font-size: 0;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-transition: all 1s;
+  -moz-transition: all 0.1s ease 1s;
+  transition: all 0.1s ease 1s;
+}
+.macbook-app {
+  display: inline-block;
+  width: 10%;
+  margin-right: 5%;
+  padding-top: 10%;
+  background-color: green;
+  border-radius: 20%;
+  box-shadow: 2px 2px 0px 2px rgba(26, 32, 43, 0.5);
+}
+.macbook-apps .macbook-app:last-of-type {
+  margin-right: 0;
+}
+.macbook:hover .macbook-apps {
+  bottom: 5%;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s ease 0.5s;
+  transition: all 1s ease 0.5s;
+}
+.macbook:hover .macbook-app {
+  -webkit-animation: appbounce 0.5s ease-in-out 1.2s;
+  -moz-animation: appbounce 0.5s ease-in-out 1.2s;
+  animation: appbounce 0.5s ease-in-out 1.2s;
+}
+.macbook .macbook-app:nth-of-type(1) {
+  background-color: #CA4549;
+}
+.macbook .macbook-app:nth-of-type(2) {
+  -webkit-animation-delay: 1.3s;
+  -moz-animation-delay: 1.3s;
+  animation-delay: 1.3s;
+  background-color: #6BAC92;
+}
+.macbook .macbook-app:nth-of-type(3) {
+  -webkit-animation-delay: 1.4s;
+  -moz-animation-delay: 1.4s;
+  animation-delay: 1.4s;
+  background-color: #D98F34;
+}
+.macbook .macbook-app:nth-of-type(4) {
+  -webkit-animation-delay: 1.5s;
+  -moz-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+  background-color: #8B92AC;
+}
+.macbook .macbook-app:nth-of-type(5) {
+  -webkit-animation-delay: 1.6s;
+  -moz-animation-delay: 1.6s;
+  animation-delay: 1.6s;
+  background-color: #CA4549;
+}
+.macbook .macbook-app:nth-of-type(6) {
+  -webkit-animation-delay: 1.7s;
+  -moz-animation-delay: 1.7s;
+  animation-delay: 1.7s;
+  background-color: #6BAC92;
+}
+.macbook .macbook-app:nth-of-type(7) {
+  -webkit-animation-delay: 1.8s;
+  -moz-animation-delay: 1.8s;
+  animation-delay: 1.8s;
+  background-color: #D98F34;
+}
+
+@-webkit-keyframes appbounce {
+  0% {
+    -webkit-transform: none;
+  }
+  50% {
+    -webkit-transform: scale(1.2) rotateZ(20deg) translateY(-3px);
+  }
+  100% {
+    -webkit-transform: none;
+  }
+}
+@-moz-keyframes appbounce {
+  0% {
+    -moz-transform: none;
+  }
+  50% {
+    -moz-transform: scale(1.2) rotateZ(20deg) translateY(-3px);
+  }
+  100% {
+    -moz-transform: none;
+  }
+}
+@keyframes appbounce {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: scale(1.2) rotateZ(20deg) translateY(-3px);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+@-webkit-keyframes arrowup {
+  from { -webkit-transform: translate(0, 5px); }
+  to { -webkit-transform: translate(0, -10px); }
+}
+@-moz-keyframes arrowup {
+  from { -moz-transform: translate(0, 5px); }
+  to { -moz-transform: translate(0, -10px); }
+}
+@keyframes arrowup {
+  from { transform: translate(0, 5px); }
+  to { transform: translate(0, -10px); }
+}
+
+
+body {
+  background-color: #EDEBEE;
+  font-family: sans-serif;
+  font-size: 1.5em;
+  font-weight: 100;
+  -webkit-font-smoothing: antialiased;
+}
+body, a {
+  color: #806973;
+}
+a {
+  color: #777;
+  -webkit-transition: all 1s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+a:hover {
+  color: #68507C;
+}
+
+#demowrap {
+  position: absolute;
+  width:25%;
+  left: 20%;
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  /*height: 285px;*/
+
 }

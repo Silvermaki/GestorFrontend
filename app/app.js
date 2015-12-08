@@ -10,5 +10,15 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
             url: '/home',
             templateUrl: '/views/home.html',
             controller: 'HomeController'
+        })
+				.state('contact', {
+            url: '/contact',
+            templateUrl: '/views/contact.html',
+            controller: 'ContactController'
+        })
+				.state('about', {
+            url: '/about',
+            templateUrl: '/views/about.html',
+            controller: 'AboutController'
         });
 }])

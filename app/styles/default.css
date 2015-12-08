@@ -43,7 +43,7 @@ a:hover {
 
 .main {
 	max-width: 82.667em;
-	min-height: 40em;
+	min-height: 20em;
 }
 
 .container > header {
@@ -125,7 +125,7 @@ a:hover {
 	content: "\e003";
 }
 
-@media screen and (max-width: 25em) { 
+@media screen and (max-width: 25em) {
 	.codrops-icon span {
 		display: none;
 	}
@@ -133,4 +133,3 @@ a:hover {
 		font-size: 75%;
 	}
 }
-
