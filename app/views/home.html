@@ -1,0 +1,41 @@
+<div ng-controller="HomeController">
+
+  <div id="sliderFrame">
+      <div id="slider">
+          <a class="lazyImage" href="../images/welcome.png" title="Bienvenido a tu gestor de datos.">Bienvenidos</a>
+          <a class="lazyImage" href="../images/charts.png" title="Visualiza y maneja a tus usuarios y datos de manera fácil.">Visualiza y Maneja</a>
+          <a class="lazyImage" href="../images/excel.png" title="Exporta tus datos a Excel.">Exporta</a>
+          <a class="lazyImage" href="../images/connect.png" title="Conéctate para comenzar.">Conéctate</a>
+
+      </div>
+
+      <!--thumbnails-->
+      <div id="thumbs">
+          <div class="thumb">
+              <div class="frame"><img src="../images/thumbwelcome.png" /></div>
+              <div class="thumb-content"><p>Bienvenidos</p>Bienvenido a tu gestor de datos.</div>
+              <div style="clear:both;"></div>
+          </div>
+          <div class="thumb">
+              <div class="frame"><img src="../images/thumbcharts.png" /></div>
+              <div class="thumb-content"><p>Visualiza y Maneja</p>Visualiza y maneja a tus usuarios y datos de manera fácil.</div>
+              <div style="clear:both;"></div>
+          </div>
+          <div class="thumb">
+              <div class="frame"><img src="../images/thumbexcel.png" /></div>
+              <div class="thumb-content"><p>Exportar</p>Exporta tus datos a Excel.</div>
+              <div style="clear:both;"></div>
+          </div>
+          <div class="thumb">
+              <div class="frame"><img src="../images/thumbconnect.png" /></div>
+              <div class="thumb-content"><p>Conéctate</p>Conéctate para comenzar.</div>
+              <div style="clear:both;"></div>
+          </div>
+      </div>
+      <!--clear above float:left elements. It is required if above #slider is styled as float:left. -->
+      <div style="clear:both;height:0;"></div>
+  </div>
+  <div class = vertical-center>
+    <button type="button" class="btn btn-info btn-xxlarge " data-toggle="modal" data-target="#LoginModal" ng-show="!$sessionStorage.currentUser"><h2><span class="glyphicon glyphicon-heart"></span> Login</h2></button>
+  </div>
+</div>

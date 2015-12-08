@@ -1,0 +1,37 @@
+.vertical-center {
+  text-align: center !important;
+  align-items: center !important;
+}
+
+.btn-xxlarge{
+  width:400px;
+  height:100px;
+  margin-top:50px;
+  border-radius: 15px !important;
+  background-color: #004C70 !important;
+}
+
+.middlealign{
+  vertical-align: middle;
+  text-align: justify;
+}
+
+body{
+  background-image: url("../images/body.jpg") !important;
+  background-repeat: repeat;
+}
+
+.FormContainer{
+  position: absolute;
+  width: 200px;
+  right:5%;
+  top: 5%;
+
+}
+
+#bodyDiv{
+  height:100vh;
+  background-image: url("../images/background.jpg") !important;
+  background-size: contain;
+  background-repeat: repeat-y;
+}
