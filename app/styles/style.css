@@ -3,21 +3,9 @@
   align-items: center !important;
 }
 
-.btn-xxlarge{
-  width:40%;
-  height:100px;
-  border-radius: 15px !important;
-  background-color: #2E9AFE !important;
-}
-
 .middlealign{
   vertical-align: middle;
   text-align: justify;
-}
-
-body{
-  background-image: url("../images/body.jpg") !important;
-  background-repeat: repeat;
 }
 
 .FormContainer{
@@ -28,10 +16,22 @@ body{
 
 }
 
-#bodyDiv{
-  height:100vh;
-  background-image: url("../images/background.jpg") !important;
-  background-repeat: repeat;
+html{
+  height: 100%;
+}
+
+body{
+  min-height: 100%;
+  background-image: url("../images/background.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+}
+
+.Nav-Container{
+  position:relative;
+  width:900px;
+  align-items: center;
 }
 
 .custom-jumbotron{
@@ -406,3 +406,16 @@ a:hover {
   /*height: 285px;*/
 
 }
+
+#nav { margin: 0; padding-top: 0.85em; width: auto; font-family:'Alegreya SC', Georgia, serif; font-size: 1.4em; }
+#nav li { margin: 0 0 0.5em 0; display: block; float: left; clear: none; margin-right: 2.5%; background:#d18b5e; -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; padding:5px 10px 5px 10px;}
+#nav li:last-child { margin-right: 0; }
+#nav a { display: block; color: #FFF; text-decoration:none; }
+#nav a:hover { color: #484a50; border-bottom-color: #484a50; }
+
+@media only screen and (max-width: 767px) {
+	#nav .current{background:#666; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; background:none; }
+	#nav { margin: 0 6% 0 0; padding: 0; }
+	#nav li { margin: 0; display: block; float: left; width: 100%; clear: none; background:none; }
+	#nav a { padding: 6px 0 8px; text-indent: 10px; color: #fff; background: rgba(194,100,40,0.75) url(images/bg_arrow_white.png) 96% 50% no-repeat; border-top: 1px solid rgb(194,100,40); -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
+	#nav a:hover { border-bottom: none; }

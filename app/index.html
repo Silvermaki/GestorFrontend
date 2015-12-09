@@ -16,71 +16,21 @@
   </head>
   <body ng-app="AngularScaffold">
       <div ng-controller="NavbarController">
-        <div class="container" id="bodyDiv">
-    			<div class="main clearfix">
-    				<nav id="menu" class="nav">
-    					<ul ng-controller="HomeController">
-    						<li>
-    							<a href="#">
-    								<span class="icon">
-    									<i aria-hidden="true" class="icon-home"></i>
-    								</span>
-    								<span>Inicio</span>
-    							</a>
-    						</li>
-    						<li ng-show="isAdmin()">
-    							<a href="#">
-    								<span class="icon">
-    									<i aria-hidden="true" class="icon-services"></i>
-    								</span>
-    								<span>Tablas</span>
-    							</a>
-    						</li>
-    						<li ng-show="isAdmin()">
-    							<a href="#">
-    								<span class="icon">
-    									<i aria-hidden="true" class="icon-portfolio"></i>
-    								</span>
-    								<span>Estadísticas</span>
-    							</a>
-    						</li>
-    						<li ng-show="isAdmin()">
-    							<a href="#">
-    								<span class="icon">
-    									<i aria-hidden="true" class="icon-team"></i>
-    								</span>
-    								<span>Usuarios</span>
-    							</a>
-    						</li>
-    						<li>
-    							<a href="#/about">
-    								<span class="icon">
-    									<i aria-hidden="true" class="icon-blog"></i>
-    								</span>
-    								<span>¿Quiénes somos?</span>
-    							</a>
-    						</li>
-    						<li>
-    							<a href="#/contact">
-    								<span class="icon">
-    									<i aria-hidden="true" class="icon-contact"></i>
-    								</span>
-    								<span>Contáctanos</span>
-    							</a>
-    						</li>
-    					</ul>
-    				</nav>
-    			</div>
-          <div>
-            <div ui-view></div>
-        </div>
-    		</div>
+        <div class="Nav-Container">
+            <ul id="nav">
+              <li class="current"><a href="#" title="Home" >Inicio</a></li>
+            <li><a href="#/about" >¿Quiénes Somos?</a></li>
+            <li><a href="#/contact" >Contáctanos</a></li>
+            </ul>
+          </div>
+          <div ui-view></div>
+
         <div class="FormContainer">
           <div class="row">
             <button type="submit" class="btn btn-danger btn-lg" ng-click="logout()" ng-show="$sessionStorage.currentUser">Log out</button>
           </div>
         </div>
-        <div id="LoginModal" class="modal fade" role="dialog">
+        <div id="LoginModal" class="modal fade">
           <div class="modal-dialog modal-sm">
 
             <!-- Modal content-->
@@ -132,7 +82,6 @@
   <script src="scripts/controllers/navbarController.js"></script>
   <script src="scripts/services/authService.js"></script>
   <script src="scripts/services/HomeService.js"></script>
-  <script src="scripts/js-image-slider.js"></script>
   <script src="scripts/modernizr.custom.js"></script>
   <!-- endinject -->
 </html>
