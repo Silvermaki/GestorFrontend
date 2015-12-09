@@ -1,23 +1,251 @@
-.vertical-center {
-  text-align: center !important;
-  align-items: center !important;
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+table{border-collapse:collapse;border-spacing:0;}
+/* start editing from here */
+a{text-decoration:none;}
+.txt-rt{text-align:right;}/* text align right */
+.txt-lt{text-align:left;}/* text align left */
+.txt-center{text-align:center;}/* text align center */
+.float-rt{float:right;}/* float right */
+.float-lt{float:left;}/* float left */
+.clear{clear:both;}/* clear float */
+.pos-relative{position:relative;}/* Position Relative */
+.pos-absolute{position:absolute;}/* Position Absolute */
+.vertical-base{	vertical-align:baseline;}/* vertical align baseline */
+.vertical-top{	vertical-align:top;}/* vertical align top */
+nav.vertical ul li{	display:block;}/* vertical menu */
+nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
+img{max-width:100%;}
+/*end reset*/
+/****-----start-body----****/
+.main{
+	margin:7em 0 0;
+	width: 30%;
+
+}
+.user {
+	text-align: right;
+	vertical-align: middle;
+	margin-right: 5.2em;
+}
+.login{
+	padding:4em 0;
+	width:100%;
 }
 
-.middlealign{
-  vertical-align: middle;
-  text-align: justify;
+form span {
+	display: block;
+	font-size: 1em;
+	color: #787878;
+	padding-bottom: 5px;
+	font-weight: 600;
+	font-family: 'Open Sans', sans-serif;
 }
+input[type="text"],input[type="Password"] {
+	padding: 9px;
+	width: 90%;
+	font-size: 1.1em;
+	margin: 10px 0px;
+	border: 2px solid#EAEEF1;
+	color: #666666;
+	background:#EAEEF1;
+	font-family: 'Open Sans', sans-serif;
+	font-weight:600;
+	outline:none;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+input[type="text"]:hover,input[type="Password"]:hover,#active{
+	background:#fff;
+	border:2px solid #609EC3;
+	outline:none;
+}
+.sign {
+	padding: 10px 0;
+}
+.forget-pass {
+	float: left;
+}
+.submit {
+	padding: 2px 2px;
+	float:left;
+	margin-right: 11px;
+}
+.submit input[type="submit"] {
+	background: #F06B37;
+	border: none;
+	outline: none;
+	padding: 0.55em 1.3em 0.6em;
+	cursor: pointer;
+	font-family: 'Open Sans', sans-serif;
+	color: #FFF;
+	font-size: 0.9em;
+	border-radius: 1.3em;
+	-webkit-border-radius: 1.3em;
+	-moz-border-radius: 1.3em;
+	-o-border-radius: 1.3em;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	font-weight: 600;
+}
+.submit input[type="submit"]:hover{
+	background:#62A0C4;
+}
+.forget{
+	float:right;
+}
+.forget-pass a {
+	float: right;
+	color:#898888;
+	font-size: 0.95em;
+	margin-top: 13px;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	font-weight: 600;
+	font-family: 'Open Sans', sans-serif;
+}
+.forget-pass a:hover {
+	text-decoration: underline;
+}
+.copy-right {
+	text-align: center;
+	width: 97%;
+	margin: 2em auto 0;
+}
+.copy-right p {
+	color: #FFF;
+	font-size: 1em;
+	font-family: 'Open Sans', sans-serif;
+}
+.copy-right p a {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1em;
+	font-weight: 600;
+	color: #1567A5;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+.copy-right p a:hover {
+	color:#fff;
+}
+/*----start-responsive design-----*/
+@media (max-width:1440px){
+	.main {
+		width:33%;
+		margin: 7em auto 0;
+	}
+	.user {
+		margin-right: 4.2em;
+	}
 
+}
+@media (max-width:1366px){
+	.main {
+		width:36%;
+	}
+
+}
+@media (max-width:1280px){
+	.main {
+		width:40%;
+	}
+	.user {
+	margin-right: 5.2em;
+	}
+
+	input[type="text"], input[type="Password"] {
+	padding: 9px;
+	width: 93%;
+	}
+}
+@media (max-width:1024px){
+	.main {
+		width:48%;
+		margin: 8em auto 0;
+	}
+
+}
+@media (max-width:768px){
+	.main {
+		width:59%;
+	}
+}
+@media (max-width:640px){
+	.main {
+		width:67%;
+	}
+
+}
+@media (max-width:480px){
+	.main {
+		width:80%;
+		margin: 3em auto 0;
+	}
+	.user {
+	margin-right: 4.2em;
+	}
+
+}
+@media (max-width:320px){
+	.main {
+		width: 97%;
+		margin: 2em auto 0;
+	}
+
+	.user {
+	margin-right: 4.2em;
+	}
+	.login {
+	padding: 1em 0;
+	}
+	.submit{
+	padding: 2px ;
+	text-align: center;
+	float:none;
+	}
+	.forget-pass {
+	float:none;
+	text-align:center;
+	margin-top: 15px
+	}
+	.forget-pass a {
+	float:none;
+	}
+	input[type="text"], input[type="Password"] {
+	padding: 6px;
+	margin: 9px 0px;
+	}
+
+}
 .FormContainer{
   position: absolute;
   width: 200px;
   right:5%;
   top: 5%;
+}
 
+.logout-div{
+  position:absolute;
+  top:10px;
+  right:10px;
 }
 
 html{
   height: 100%;
+	background-color: #202020;
 }
 
 body{
@@ -28,19 +256,6 @@ body{
 
 }
 
-.Nav-Container{
-  position:relative;
-  width:900px;
-  align-items: center;
-}
-
-.custom-jumbotron{
-  margin-left: 5%;
-  margin-right: 5%;
-  color:white !important;
-  text-align: center;
-  background-color: #004C70 !important;
-}
 
 h1 {
     font-family:'Questrial', Verdana, sans-serif;
@@ -122,270 +337,12 @@ h3 {
     font-weight: bold;
 }​
 
-.macbook {
-  width: 300px;
-  margin: 50px auto;
-  -webkit-perspective: 750;
-  -webkit-perspective-origin: 50% bottom;
-  -webkit-transform-style: preserve-3d;
-  -moz-perspective: 750px;
-  -moz-perspective-origin: 50% bottom;
-  -moz-transform-style: preserve-3d;
-  perspective: 750;
-  perspective-origin: 50% bottom;
-  transform-style: preserve-3d;
-}
-.macbook-lid {
-  width: 80%;
-  margin: 0 auto;
-  -webkit-transform-origin: 50% bottom;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-origin: 50% bottom;
-  -moz-transform-style: preserve-3d;
-  transform-origin: 50% bottom;
-  transform-style: preserve-3d;
-  -webkit-transition: all 1s;
-  -moz-transition: all 1s;
-  transition: all 1s;
-}
-.macbook-lid:before {
-  display: block;
-  content: '';
-  width: 92%;
-  margin: 0 auto;
-  padding: 2% 3% 0 3%;
-  background-color: #D3D1D2;
-  border-radius: 10px 10px 0 0;
-  -webkit-transform-origin: 50% bottom;
-  -webkit-transform: rotate3d(1, 0, 0, 90deg);
-  -moz-transform-origin: 50% bottom;
-  -moz-transform: rotate3d(1, 0, 0, 90deg);
-  transform-origin: 50% bottom;
-  transform: rotate3d(1, 0, 0, 90deg);
-  -webkit-transition: all 1s;
-  -moz-transition: all 1s;
-  transition: all 1s;
-}
-.macbook-screen {
-  position: relative;
-  background-color: #353535;
-  margin: 0 auto;
-  padding: 3%;
-  border-radius: 5px 5px 0 0;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  -webkit-transition: all 1s;
-  -moz-transition: all 1s;
-  transition: all 1s;
-}
-.macbook-screen:before {
-  display: block;
-  content: '';
-  position: absolute;
-  top: 2%;
-  left: 49%;
-  width: 1%;
-  padding-top: 1%;
-  background-color: #000;
-}
-.macbook-content {
-  position: relative;
-  overflow: hidden;
-  background-color: #323C4D;
-  box-shadow: inset 0px 0px 6px #222;
-}
-.macbook-content:before {
-  display: block;
-  content: '';
-  width: 1px;
-  padding-top: 60%;
-  float: left;
-}
-.macbook-content:after {
-  display: block;
-  content: '';
-  clear: both;
-}
-
-.macbook:not(:hover) .macbook-lid {
-  -webkit-transform: rotate3d(-1, 0, 0, 91deg);
-  -moz-transform: rotate3d(-1, 0, 0, 91deg);
-  transform: rotate3d(-1, 0, 0, 91deg);
-}
-.macbook:not(:hover) .macbook-lid:before {
-  width: 94%;
-}
 
 
-
-
-
-
-.macbook-base {
-  width: 100%;
-  overflow: hidden;
-  background-color: #D3D1D2;
-  border-radius: 2px 2px 10px 10px;
-}
-.macbook-base:before {
-  display: block;
-  content: '';
-  width: 30%;
-  margin: 0 auto 1% auto;
-  padding-top: 1.5%;
-  background: #B0B0B0;
-  border-radius: 0 0 10px 10px;
-}
-.macbook-base:after {
-  display: block;
-  content: '';
-  padding-top: 1%;
-  background-color: #B3B3B3;
-}
-
-
-
-.macbook-apps, .macbook-app {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.macbook-apps {
-  width: 60%;
-  position: absolute;
-  bottom: -20%;
-  left: 50%;
-  font-size: 0;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  transform: translateX(-50%);
-  -webkit-transition: all 1s;
-  -moz-transition: all 0.1s ease 1s;
-  transition: all 0.1s ease 1s;
-}
-.macbook-app {
-  display: inline-block;
-  width: 10%;
-  margin-right: 5%;
-  padding-top: 10%;
-  background-color: green;
-  border-radius: 20%;
-  box-shadow: 2px 2px 0px 2px rgba(26, 32, 43, 0.5);
-}
-.macbook-apps .macbook-app:last-of-type {
-  margin-right: 0;
-}
-.macbook:hover .macbook-apps {
-  bottom: 5%;
-  -webkit-transition: all 1s;
-  -moz-transition: all 1s ease 0.5s;
-  transition: all 1s ease 0.5s;
-}
-.macbook:hover .macbook-app {
-  -webkit-animation: appbounce 0.5s ease-in-out 1.2s;
-  -moz-animation: appbounce 0.5s ease-in-out 1.2s;
-  animation: appbounce 0.5s ease-in-out 1.2s;
-}
-.macbook .macbook-app:nth-of-type(1) {
-  background-color: #CA4549;
-}
-.macbook .macbook-app:nth-of-type(2) {
-  -webkit-animation-delay: 1.3s;
-  -moz-animation-delay: 1.3s;
-  animation-delay: 1.3s;
-  background-color: #6BAC92;
-}
-.macbook .macbook-app:nth-of-type(3) {
-  -webkit-animation-delay: 1.4s;
-  -moz-animation-delay: 1.4s;
-  animation-delay: 1.4s;
-  background-color: #D98F34;
-}
-.macbook .macbook-app:nth-of-type(4) {
-  -webkit-animation-delay: 1.5s;
-  -moz-animation-delay: 1.5s;
-  animation-delay: 1.5s;
-  background-color: #8B92AC;
-}
-.macbook .macbook-app:nth-of-type(5) {
-  -webkit-animation-delay: 1.6s;
-  -moz-animation-delay: 1.6s;
-  animation-delay: 1.6s;
-  background-color: #CA4549;
-}
-.macbook .macbook-app:nth-of-type(6) {
-  -webkit-animation-delay: 1.7s;
-  -moz-animation-delay: 1.7s;
-  animation-delay: 1.7s;
-  background-color: #6BAC92;
-}
-.macbook .macbook-app:nth-of-type(7) {
-  -webkit-animation-delay: 1.8s;
-  -moz-animation-delay: 1.8s;
-  animation-delay: 1.8s;
-  background-color: #D98F34;
-}
-
-@-webkit-keyframes appbounce {
-  0% {
-    -webkit-transform: none;
-  }
-  50% {
-    -webkit-transform: scale(1.2) rotateZ(20deg) translateY(-3px);
-  }
-  100% {
-    -webkit-transform: none;
-  }
-}
-@-moz-keyframes appbounce {
-  0% {
-    -moz-transform: none;
-  }
-  50% {
-    -moz-transform: scale(1.2) rotateZ(20deg) translateY(-3px);
-  }
-  100% {
-    -moz-transform: none;
-  }
-}
-@keyframes appbounce {
-  0% {
-    transform: none;
-  }
-  50% {
-    transform: scale(1.2) rotateZ(20deg) translateY(-3px);
-  }
-  100% {
-    transform: none;
-  }
-}
-
-@-webkit-keyframes arrowup {
-  from { -webkit-transform: translate(0, 5px); }
-  to { -webkit-transform: translate(0, -10px); }
-}
-@-moz-keyframes arrowup {
-  from { -moz-transform: translate(0, 5px); }
-  to { -moz-transform: translate(0, -10px); }
-}
-@keyframes arrowup {
-  from { transform: translate(0, 5px); }
-  to { transform: translate(0, -10px); }
-}
-
-
-body {
-  background-color: #EDEBEE;
-  font-family: sans-serif;
-  font-size: 1.5em;
-  font-weight: 100;
-  -webkit-font-smoothing: antialiased;
-}
 body, a {
   color: #806973;
 }
+
 a {
   color: #777;
   -webkit-transition: all 1s;
@@ -396,16 +353,6 @@ a:hover {
   color: #68507C;
 }
 
-#demowrap {
-  position: absolute;
-  width:25%;
-  left: 20%;
-  -moz-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  /*height: 285px;*/
-
-}
 
 #nav { margin: 0; padding-top: 0.85em; width: auto; font-family:'Alegreya SC', Georgia, serif; font-size: 1.4em; }
 #nav li { margin: 0 0 0.5em 0; display: block; float: left; clear: none; margin-right: 2.5%; background:#d18b5e; -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; padding:5px 10px 5px 10px;}
@@ -417,5 +364,5 @@ a:hover {
 	#nav .current{background:#666; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; background:none; }
 	#nav { margin: 0 6% 0 0; padding: 0; }
 	#nav li { margin: 0; display: block; float: left; width: 100%; clear: none; background:none; }
-	#nav a { padding: 6px 0 8px; text-indent: 10px; color: #fff; background: rgba(194,100,40,0.75) url(images/bg_arrow_white.png) 96% 50% no-repeat; border-top: 1px solid rgb(194,100,40); -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
+	#nav a { padding: 6px 0 8px; text-indent: 10px; color: #fff; background: rgba(194,100,40,0.75) url(../images/bg_arrow_white.png) 96% 50% no-repeat; border-top: 1px solid rgb(194,100,40); -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
 	#nav a:hover { border-bottom: none; }
