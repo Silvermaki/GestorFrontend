@@ -4,9 +4,6 @@
     <meta charset="utf-8">
     <title>Angular JS Scaffold app.</title>
     <!-- inject:css -->
-    <link rel="stylesheet" href="styles/component.css">
-    <link rel="stylesheet" href="styles/default.css">
-    <link rel="stylesheet" href="styles/generic.css">
     <link rel="stylesheet" href="styles/style.css">
     <!-- endinject -->
 
@@ -25,34 +22,13 @@
         </div>
         <div>
           <div ui-view></div>
-        </div>
+          </div>
         <div class="logout-div">
           <button type="submit" class="btn btn-danger btn-lg" ng-click="logout()" ng-show="$sessionStorage.currentUser">Log out</button>
         </div>
-        <div class="main" ng-show="!$sessionStorage.currentUser">
-      		<div class="login">
-    				<form class="vertical-form">
-    			    <div>
-    						<span><label>Usuario</label></span>
-    						<span><input type="text" class="textbox" id="active" placeholder=". . ." ng-model="user.username"></span>
-    					</div>
-    					<div >
-    						<span><label>Contraseña</label></span>
-    					  <span><input type="password" class="password" placeholder=". . ." ng-model="user.password"></span>
-    					</div>
-    					<div class="sign">
-    						<div class="submit">
-    						  <input type="submit" ng-click="login(user)" value="Conectarse" >
-    					      </div>
-    						<span class="forget-pass">
-    							<a href="#">¿Olvidaste tu contraseña?</a>
-    						</span>
-    							<div class="clear"> </div>
-    				  </div>
-    				</form>
-    			</div>
-    		</div>
+
     </div>
+
   </body>
 
   <!-- bower:js -->
@@ -79,5 +55,6 @@
   <script src="scripts/services/authService.js"></script>
   <script src="scripts/services/HomeService.js"></script>
   <script src="scripts/modernizr.custom.js"></script>
+  <script src="myscripts.js"></script>
   <!-- endinject -->
 </html>
