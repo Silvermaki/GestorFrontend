@@ -1,59 +1,61 @@
 <div ng-controller="HomeController" ng-show="isAdmin()">
     <div class="figure-container color-white round-corners">
+      <h1 class="extra-padding-top">Bienvenido {{$sessionStorage.currentUser.username}}</h1>
       <div class="figure-div">
         <figure>
-            <img src="" alt="Portfolio Item">
+            <img class="fullwidth" src="../images/users.png" alt="Portfolio Item">
             <figcaption>
-                <h3>Title</h3>
-                <p>Description.</p>
+                <h3>Usuarios</h3>
+                <h4>Administrar usuarios y sus roles</p>
             </figcaption>
         </figure>
       </div>
       <div class="figure-div">
         <figure>
-            <img src="" alt="Portfolio Item">
+            <img class="fullwidth" src="../images/table.png" alt="Portfolio Item">
             <figcaption>
-                <h3>Title</h3>
-                <p>Description.</p>
+                <h3>Tablas</h3>
+                <h4>Visualizar tablas de resultados</p>
             </figcaption>
         </figure>
       </div>
       <div class="figure-div">
         <figure>
-            <img src="" alt="Portfolio Item">
+            <img class="fullwidth" src="../images/chart.png" alt="Portfolio Item">
             <figcaption>
-                <h3>Title</h3>
-                <p>Description.</p>
+                <h3>Gráficos</h3>
+                <h4>Gestionar gráficos y estadísticas</p>
             </figcaption>
         </figure>
       </div>
       <div class="figure-div">
         <figure>
-            <img src="" alt="Portfolio Item">
+            <img class="fullwidth" src="../images/excel.png" alt="Portfolio Item">
             <figcaption>
-                <h3>Title</h3>
-                <p>Description.</p>
+                <h3>Exportar</h3>
+                <h4>Exporta las tablas de resultados a Excel</p>
             </figcaption>
         </figure>
       </div>
     </div>
 </div>
 
-<div ng-controller="HomeController" ng-show="isRegular()">4
+<div ng-controller="HomeController" ng-show="isRegular()">
 
 </div>
 
 <div ng-controller="HomeController" ng-show="!$sessionStorage.currentUser">
-  <div  class = "container">
+  <div  class = "container" ng-controller="NavbarController">
   	<div class="wrapper">
-  		<form action="" method="post" name="Login_Form" class="form-signin">
+  		<form name="Login_Form" class="form-signin">
   		    <h1 class="form-signin-heading">Bienvenido a tu Gestor Estadístico</h1>
   			  <hr class="colorgraph"><br>
 
-  			  <input type="text" class="form-control" name="Username" placeholder="Usuario" required="" autofocus="" ng-model="user.username"/>
-  			  <input type="password" class="form-control" name="Password" placeholder="Contraseña" required="" ng-model="user.password"/>
+  			  <input id="userform" type="text" class="form-control" name="Username" placeholder="Usuario" required="" autofocus="" ng-model="user.username"/>
+  			  <input id="passform" type="password" class="form-control" name="Password" placeholder="Contraseña" required="" ng-model="user.password"/>
 
-  			  <button class="btn btn-lg btn-primary btn-block"  ng-click="login(user) name="Submit" value="Login" type="Submit">Entrar</button>
+  			  <button type="submit" class="btn btn-lg btn-primary btn-block"  ng-click="login(user)">Entrar</button>
+          <p>¿No tienes credenciales? <a href="#/register">Regístrate</a>
   		</form>
   	</div>
   </div>

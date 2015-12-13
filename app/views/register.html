@@ -1,0 +1,15 @@
+<div ng-controller="RegisterController" ng-show="!$sessionStorage.currentUser">
+  <div  class = "container no-padding" ng-controller="NavbarController">
+  	<div class="wrapper">
+  		<form name="Login_Form" class="form-signin">
+  		    <h1 class="form-signin-heading">!Bienvenido!</h1>
+  			  <hr class="colorgraph"><br>
+          <p>Selecciona un nombre de usuario y una contraseña.</p>
+  			  <input type="text" class="form-control" name="Username" placeholder="Usuario" required="" autofocus="" ng-model="user.username"/>
+  			  <input type="password" class="form-control" name="Password" placeholder="Contraseña" required="" ng-model="user.password"/>
+
+  			  <button type="submit" class="btn btn-lg btn-primary btn-block"  ng-click="register()">Registrarse</button>
+  		</form>
+  	</div>
+  </div>
+</div>
