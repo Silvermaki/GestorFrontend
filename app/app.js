@@ -51,9 +51,5 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
             templateUrl: '/views/createuser.html',
             controller: 'RegisterController'
         })
-				.state('updateuser', {
-            url: '/updateuser',
-            templateUrl: '/views/updateuser.html',
-            controller: 'RegisterController'
-        });
+				;
 }])

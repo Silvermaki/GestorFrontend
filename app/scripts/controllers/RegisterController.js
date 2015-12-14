@@ -5,10 +5,31 @@ angular.module('AngularScaffold.Controllers')
       $scope.$sessionStorage = $sessionStorage;
       $scope.wrongpass=false;
       $scope.wrongpass2=false;
+      $scope.updateTable=false;
       $scope.roles = ['Televisión', 'Radio', 'Sociales', 'Periódico', 'Cine'];
       $scope.selection = ['regular'];
       $scope.selecteduser = {};
       $scope.$log = $log;
+      $scope.sortType = 'username'; // set the default sort type
+      $scope.sortReverse  = false;
+
+      $scope.changeReverse = function(){
+        if($scope.sortReverse == false){
+          $scope.sortReverse = true;
+        }else {
+          $scope.sortReverse = false;
+        }
+      }
+
+      $scope.setSortUser = function(){
+        $scope.sortType = 'username';
+        $scope.changeReverse();
+      }
+
+      $scope.setSortRole = function(){
+        $scope.sortType = 'scope';
+        $scope.changeReverse();
+      }
 
       $scope.toggleSelection = function toggleSelection(roleName) {
         var idx = $scope.selection.indexOf(roleName);
@@ -37,6 +58,7 @@ angular.module('AngularScaffold.Controllers')
         authService.UpdateUser(userc).then(function(response){
         }).catch(function(err){
         })
+        $scope.updateTable=true;
       }
 
 
@@ -46,6 +68,7 @@ angular.module('AngularScaffold.Controllers')
        }).catch(function(err){
 
        })
+       $scope.updateTable=false;
      }
 
 

@@ -5,8 +5,8 @@
     <div class="row">
         <div class="col-xs-12">
             <a href="#/createuser"><button type="button"  class="btn btn-success col-lg-4 col-xs-4" ><span class="glyphicon glyphicon-plus"></span> Agregar Nuevo Usuario</span></button></a>
-            <button type="button"  class=" btn btn-warning col-lg-3 col-xs-3"  ><span class="glyphicon glyphicon-sort"></span> Nombre</span></button>
-            <button type="button"  class=" btn btn-warning col-lg-3 col-xs-3"  ><span class="glyphicon glyphicon-sort"></span> Tipo</span></button>
+            <button type="button"  ng-click="setSortUser()" class=" btn btn-warning col-lg-3 col-xs-3"  ><span class="glyphicon glyphicon-sort"></span> Nombre</span></button>
+            <button type="button"  ng-click="setSortRole()" class=" btn btn-warning col-lg-3 col-xs-3"  ><span class="glyphicon glyphicon-sort"></span> Tipo</span></button>
             <button type="button"  ng-click="getUsers()" class="btn btn-info col-lg-2 col-xs-2"  ><span  class="glyphicon glyphicon-refresh"></span> Actualizar</span></button>
         </div>
     </div>
@@ -23,14 +23,14 @@
                 <h3>Administrar</h3>
             </th>
         </tr>
-            <tr  ng-repeat="user in users">
-                <td class="col-lg-4 col-xs-4">
+            <tr  ng-repeat="user in users | orderBy:sortType:sortReverse">
+                <td class="col-lg-4 col-xs-4" ng-if="user.scope[0]=='regular'">
                     {{user.username}}
                 </td>
-                <td class="col-lg-6 col-xs-6">
+                <td class="col-lg-6 col-xs-6" ng-if="user.scope[0]=='regular'">
                     {{user.scope}}
                 </td>
-                <td class="col-lg-2 col-xs-2">
+                <td class="col-lg-2 col-xs-2" ng-if="user.scope[0]=='regular'">
                     <button type="button" ng-click="updateUser(user)" class="btn btn-warning" ><span class="glyphicon glyphicon-pencil"></span>Asignar Roles</button>
                 </td>
             </tr>
@@ -41,5 +41,6 @@
 <div class="checkbox-container">
   <h4>Selecione el listado de roles que desea asignar:</h4>
     <label class = "extra-padding" ng-repeat="roleName in roles"><input type="checkbox" name="selectedRoles[]" value="{{roleName}}" ng-checked="selection.indexOf(roleName) > -1" ng-click="toggleSelection(roleName)"> {{roleName}}</label>
+<h4 class="color-blue" ng-show="updateTable">Operación exitosa, para ver los cambios actualice la tabla.</h4>
     </div>
 </div>
