@@ -1,5 +1,5 @@
 <div ng-controller="RegisterController" ng-show="!$sessionStorage.currentUser">
-  <div  class = "container no-padding" ng-controller="NavbarController">
+  <div  class = "container no-padding">
   	<div class="wrapper">
   		<form name="Login_Form" class="form-signin">
   		    <h1 class="form-signin-heading">!Bienvenido!</h1>
@@ -8,8 +8,9 @@
   			  <input type="text" class="form-control" name="Username" placeholder="Usuario" required="" autofocus="" ng-model="user.username"/>
   			  <input type="password" class="form-control" name="Password" placeholder="Contraseña" required="" ng-model="user.password"/>
 
-  			  <button type="submit" class="btn btn-lg btn-primary btn-block"  ng-click="register()">Registrarse</button>
+  			  <button type="submit" class="btn btn-lg btn-primary btn-block"  ng-click="register()"><span class="glyphicon glyphicon-ok"></span> Registrarse</button>
+          <p ng-show="wrongpass" class="color-red">Datos erróneos. Intente con otro nombre de usuario.</p>
   		</form>
   	</div>
-  </div>
+
 </div>

@@ -1,47 +1,67 @@
 <div ng-controller="HomeController" ng-show="isAdmin()">
-    <div class="figure-container color-white round-corners">
+    <div class="figure-container color-white round-corners extra-padding-sides">
       <h1 class="extra-padding-top">Bienvenido {{$sessionStorage.currentUser.username}}</h1>
+      <hr class="colorgraph"><br>
       <div class="figure-div">
         <figure>
-            <img class="fullwidth" src="../images/users.png" alt="Portfolio Item">
+          <a href="#/user" title="User" >
+            <img class="fullwidth figureImage" src="../images/users.png" alt="Portfolio Item">
             <figcaption>
                 <h3>Usuarios</h3>
                 <h4>Administrar usuarios y sus roles</p>
             </figcaption>
+          </a>
         </figure>
       </div>
       <div class="figure-div">
         <figure>
-            <img class="fullwidth" src="../images/table.png" alt="Portfolio Item">
+          <a href="#/tables" title="User" >
+            <img class="fullwidth figureImage" src="../images/table.png" alt="Portfolio Item">
             <figcaption>
                 <h3>Tablas</h3>
                 <h4>Visualizar tablas de resultados</p>
             </figcaption>
+          </a>
         </figure>
       </div>
       <div class="figure-div">
         <figure>
-            <img class="fullwidth" src="../images/chart.png" alt="Portfolio Item">
+          <a href="#/graphs" title="User" >
+            <img class="fullwidth figureImage" src="../images/chart.png" alt="Portfolio Item">
             <figcaption>
                 <h3>Gráficos</h3>
                 <h4>Gestionar gráficos y estadísticas</p>
             </figcaption>
+          </a>
         </figure>
       </div>
       <div class="figure-div">
         <figure>
-            <img class="fullwidth" src="../images/excel.png" alt="Portfolio Item">
+          <a href="#/excel" title="User" >
+            <img class="fullwidth figureImage" src="../images/excel.png" alt="Portfolio Item">
             <figcaption>
                 <h3>Exportar</h3>
                 <h4>Exporta las tablas de resultados a Excel</p>
             </figcaption>
+          </a>
         </figure>
       </div>
     </div>
 </div>
 
 <div ng-controller="HomeController" ng-show="isRegular()">
-
+    <div class="form-signin color-white round-corners extra-padding center-div">
+      <h1>Descargas</h1>
+      <hr class="colorgraph"><br>
+      <p>Descarga nuestra aplicación de celular para comenzar</p>
+      <img class="phoneimage" src="../images/phone.jpg" alt="phone">
+      <div class=full-width>
+        <img class="appleimage" src="../images/apple.png" alt="phone">
+      </div>
+      <div class=full-width>
+        <img class="androidimage" src="../images/android.png" alt="phone">
+      </div>
+    </div>
 </div>
 
 <div ng-controller="HomeController" ng-show="!$sessionStorage.currentUser">
@@ -54,7 +74,8 @@
   			  <input id="userform" type="text" class="form-control" name="Username" placeholder="Usuario" required="" autofocus="" ng-model="user.username"/>
   			  <input id="passform" type="password" class="form-control" name="Password" placeholder="Contraseña" required="" ng-model="user.password"/>
 
-  			  <button type="submit" class="btn btn-lg btn-primary btn-block"  ng-click="login(user)">Entrar</button>
+  			  <button type="submit" class="btn btn-lg btn-primary btn-block"  ng-click="login(user)"><span class="glyphicon glyphicon-log-in"></span> Entrar</button>
+          <p ng-show="wronglogin" class="color-red">Datos erróneos. Usuario o contraseña incorrectos.</p>
           <p>¿No tienes credenciales? <a href="#/register">Regístrate</a>
   		</form>
   	</div>

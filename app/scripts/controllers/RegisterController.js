@@ -1,27 +1,60 @@
 angular.module('AngularScaffold.Controllers')
-  .controller('RegisterController', ['AuthService', '$scope', '$rootScope', '$sessionStorage',  function (authService, $scope, $rootScope, $sessionStorage) {
+  .controller('RegisterController', ['AuthService','$log','$location' ,'$scope', '$rootScope', '$sessionStorage',  function (authService, $log, $location ,$scope, $rootScope, $sessionStorage) {
       $scope.user = {};
+      $scope.users = [];
       $scope.$sessionStorage = $sessionStorage;
+      $scope.wrongpass=false;
+      $scope.wrongpass2=false;
+      $scope.roles = ['Televisión', 'Radio', 'Sociales', 'Periódico', 'Cine'];
+      $scope.selection = ['regular'];
+      $scope.selecteduser = {};
+      $scope.$log = $log;
+
+      $scope.toggleSelection = function toggleSelection(roleName) {
+        var idx = $scope.selection.indexOf(roleName);
+        if (idx > -1) {
+          $scope.selection.splice(idx, 1);
+        }
+        else {
+          $scope.selection.push(roleName);
+        }
+      }
 
       $scope.register = function(){
         var user = {username: $scope.user.username, password:  $scope.user.password, scope: ['regular']};
         authService.Register(user).then(function(response){
-          alert('Registered in correctly!');
           $scope.login({username: user.username, password: user.password});
+          $location.path('home');
         }).catch(function(err){
-          console.log(err);
-          alert(err.data.error + " " + err.data.message);
+          $scope.wrongpass=true;
         })
       }
 
-      $scope.register2 = function(){
-        var user = {username: $scope.user.username, password:  $scope.user.password, scope: $scope.user.scope};
-        authService.Register(user).then(function(response){
-          alert('Registered in correctly!');
-          $scope.login({username: user.username, password: user.password});
+
+      $scope.updateUser = function (currentuser) {
+        $scope.selecteduser = currentuser;
+        var userc = { _id: $scope.selecteduser._id, username: $scope.selecteduser.username, password:  $scope.selecteduser.password, scope: $scope.selection};
+        authService.UpdateUser(userc).then(function(response){
         }).catch(function(err){
-          console.log(err);
-          alert(err.data.error + " " + err.data.message);
+        })
+      }
+
+
+      $scope.getUsers = function(){
+       authService.GetUsers().then(function(response){
+         $scope.users = response.data;
+       }).catch(function(err){
+
+       })
+     }
+
+
+      $scope.register2 = function(){
+        var user = {username: $scope.user.username, password:  $scope.user.password, scope: $scope.selection};
+        authService.Register(user).then(function(response){
+          $location.path('user');
+        }).catch(function(err){
+          $scope.wrongpass2=true;
         })
       }
   }]);

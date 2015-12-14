@@ -25,5 +25,35 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
             url: '/register',
             templateUrl: '/views/register.html',
             controller: 'RegisterController'
+        })
+				.state('user', {
+            url: '/user',
+            templateUrl: '/views/user.html',
+            controller: 'RegisterController'
+        })
+				.state('tables', {
+            url: '/tables',
+            templateUrl: '/views/tables.html',
+            controller: 'TablesController'
+        })
+				.state('graphs', {
+            url: '/graphs',
+            templateUrl: '/views/graphs.html',
+            controller: 'GraphsController'
+        })
+				.state('excel', {
+            url: '/excel',
+            templateUrl: '/views/excel.html',
+            controller: 'ExcelController'
+        })
+				.state('createuser', {
+            url: '/createuser',
+            templateUrl: '/views/createuser.html',
+            controller: 'RegisterController'
+        })
+				.state('updateuser', {
+            url: '/updateuser',
+            templateUrl: '/views/updateuser.html',
+            controller: 'RegisterController'
         });
 }])

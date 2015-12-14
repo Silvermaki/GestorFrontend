@@ -15,16 +15,16 @@
       <div ng-controller="NavbarController">
         <div>
             <ul id="nav">
-              <li class="current"><a href="#" title="Home" >Inicio</a></li>
-              <li><a href="#/about" >¿Quiénes Somos?</a></li>
-              <li><a href="#/contact" >Contáctanos</a></li>
+              <li class="current"><a href="#" title="Home" ><span class="glyphicon glyphicon-home"></span> Inicio</a></li>
+              <li><a href="#/about" ><span class="glyphicon glyphicon-question-sign"></span> ¿Quiénes Somos?</a></li>
+              <li><a href="#/contact" ><span class="glyphicon glyphicon-envelope"></span> Contáctanos</a></li>
             </ul>
         </div>
         <div>
           <div ui-view></div>
           </div>
-        <div class="logout-div">
-          <button type="submit" class="btn btn-danger btn-lg" ng-click="logout()" ng-show="$sessionStorage.currentUser">Desconectarse</button>
+        <div class="logout-div" ng-controller="NavbarController">
+          <button type="submit" class="btn btn-danger btn-lg" ng-click="logout()" ng-show="$sessionStorage.currentUser"><span class="glyphicon glyphicon-log-out"> Desconectarse</button>
         </div>
 
     </div>
@@ -53,9 +53,11 @@
   <script src="scripts/controllers/HomeController.js"></script>
   <script src="scripts/controllers/navbarController.js"></script>
   <script src="scripts/controllers/RegisterController.js"></script>
+  <script src="scripts/controllers/TablesController.js"></script>
+  <script src="scripts/controllers/GraphsController.js"></script>
+  <script src="scripts/controllers/ExcelController.js"></script>
   <script src="scripts/services/authService.js"></script>
   <script src="scripts/services/HomeService.js"></script>
   <script src="scripts/modernizr.custom.js"></script>
-  <script src="scripts/scripts.js"></script>
   <!-- endinject -->
 </html>

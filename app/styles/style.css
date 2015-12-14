@@ -1,5 +1,34 @@
+.color-red{
+	color: #FA5858;
+}
+
+.extra-padding-sides{
+	padding-left: 2.5% !important;
+	padding-right: 2.5% !important;
+}
+
+table caption {
+	padding: .5em 0;
+}
+
+@media screen and (max-width: 767px) {
+  table caption {
+    border-bottom: 1px solid #ddd;
+  }
+}
+
 .no-padding{
   padding: 0px !important;
+}
+
+.center-div{
+  text-align: center;
+
+}
+
+.full-width{
+  width: 100%;
+  padding-top: 15px;
 }
 
 .form-signin {
@@ -146,6 +175,17 @@ h1 {
   display: inline-block;
 }
 
+.checkbox-container{
+	text-align: center;
+}
+
+.checkbox-div{
+	display: inline-block;
+	padding-bottom: 15px;
+	padding-right: 2px;
+  padding-left: 2px;
+}
+
 .figure-container{
 	width:80%;
   margin:auto;
@@ -164,7 +204,7 @@ figure {
 figure:hover {
     -webkit-transform: perspective(500) rotateX(90deg) translateY(-3em) translateZ(3em);
 }
-img {
+.figureImage {
     background-color: #2E2E2E;
     box-shadow: 0 20px 15px -10px hsla(0,0%,0%,.25);
     display: block;
@@ -245,7 +285,7 @@ over {
 	border-bottom-color: #484a50;
 }
 
-@media only screen and (max-width: 440px) {
+@media only screen and (max-width: 500px) {
   figure {
       height: 125px;
       width: 150px;

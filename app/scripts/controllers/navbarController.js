@@ -1,13 +1,15 @@
 angular.module('AngularScaffold.Controllers')
-  .controller('NavbarController', ['AuthService', '$scope', '$rootScope', '$sessionStorage',  function (authService, $scope, $rootScope, $sessionStorage) {
+  .controller('NavbarController', ['AuthService','$location','$scope', '$rootScope', '$sessionStorage',  function (authService,$location, $scope, $rootScope, $sessionStorage) {
       $scope.user = {};
       $scope.$sessionStorage = $sessionStorage;
+      $scope.wronglogin=false;
 
       $scope.logout = function(){
         authService.Logout().then(function(response){
           $sessionStorage.$reset();
+          $location.path('#/home');
         }).catch(function(err){
-          alert(err.data.error + " " + err.data.message);
+
         })
       }
 
@@ -16,18 +18,7 @@ angular.module('AngularScaffold.Controllers')
           $sessionStorage.currentUser = response.data;
           $scope.user = {};
         }).catch(function(err){
-          alert(err.data.error + " " + err.data.message);
+          $scope.wronglogin=true;
         });
-      }
-
-      $scope.register = function(){
-        var user = {username: $scope.user.username, password:  $scope.user.password, scope: ['regular']};
-        authService.Register(user).then(function(response){
-          alert('Registered in correctly!');
-          $scope.login({username: user.username, password: user.password});
-        }).catch(function(err){
-          console.log(err);
-          alert(err.data.error + " " + err.data.message);
-        })
       }
   }]);

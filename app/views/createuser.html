@@ -1,0 +1,21 @@
+<div ng-controller="HomeController" ng-show="isAdmin()">
+  <div ng-controller="RegisterController">
+    	<div class="wrapper">
+    		<form name="Login_Form" class="form-signin">
+    		    <h1 class="form-signin-heading">Crear Usuario</h1>
+    			  <hr class="colorgraph"><br>
+            <p>Selecciona un nombre de usuario y una contraseña:</p>
+    			  <input type="text" class="form-control" name="Username" placeholder="Usuario" required="" autofocus="" ng-model="user.username"/>
+    			  <input type="password" class="form-control" name="Password" placeholder="Contraseña" required="" ng-model="user.password"/>
+            <p>Selecciona los roles de este usuario:</p>
+            <div class="checkbox-container">
+              <div class="checkbox-div">
+                <label ng-repeat="roleName in roles"><input type="checkbox" name="selectedRoles[]" value="{{roleName}}" ng-checked="selection.indexOf(roleName) > -1" ng-click="toggleSelection(roleName)"> {{roleName}}</label>
+              </div>
+            </div>
+    			  <button type="submit" class="btn btn-lg btn-primary btn-block"  ng-click="register2()"><span class="glyphicon glyphicon-ok"></span> Crear</button>
+            <a href="#/user"><button type="submit" class="btn btn-lg btn-warning btn-block"><span class="glyphicon glyphicon-remove"></span> Cancelar</button></a>
+            <p ng-show="wrongpass2" class="color-red">Datos erróneos. Intente con otro nombre de usuario.</p>
+    		</form>
+    	</div>
+</div>
