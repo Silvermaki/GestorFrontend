@@ -1,6 +1,6 @@
 <div ng-controller="HomeController" ng-show="isAdmin()">
-    <div class="figure-container color-white round-corners extra-padding-sides">
-      <h1 class="extra-padding-top">Bienvenido {{$sessionStorage.currentUser.username}}</h1>
+    <div class="container color-white round-corners extra-padding single">
+      <h1 class="extra-padding-top">Bienvenido {{$localStorage.currentUser.username}}</h1>
       <hr class="colorgraph"><br>
       <div class="figure-div">
         <figure>
@@ -50,21 +50,90 @@
 </div>
 
 <div ng-controller="HomeController" ng-show="isRegular()">
-    <div class="form-signin color-white round-corners extra-padding center-div">
-      <h1>Descargas</h1>
+  <div class="container color-white round-corners extra-padding">
+      <h1>Encuestas</h1>
       <hr class="colorgraph"><br>
-      <p>Descarga nuestra aplicación de celular para comenzar</p>
-      <img class="phoneimage" src="../images/phone.jpg" alt="phone">
-      <div class=full-width>
-        <img class="appleimage" src="../images/apple.png" alt="phone">
-      </div>
-      <div class=full-width>
-        <img class="androidimage" src="../images/android.png" alt="phone">
-      </div>
+        <div class="figure-div-small">
+          <div class="figure-div">
+            <figure>
+              <a href="#/tv" title="User" >
+                <img class="fullwidth figureImage" src="../images/tv.png" alt="Portfolio Item">
+                <figcaption>
+                    <h3>Televisión</h3>
+                    <h4>Responder Encuesta</p>
+                </figcaption>
+              </a>
+            </figure>
+          </div>
+          <div class="figure-div">
+            <figure>
+              <a href="#/radio" title="User" >
+                <img class="fullwidth figureImage" src="../images/radio.png" alt="Portfolio Item">
+                <figcaption>
+                    <h3>Radio</h3>
+                    <h4>Responder Encuesta</p>
+                </figcaption>
+              </a>
+            </figure>
+          </div>
+          <div class="figure-div">
+            <figure>
+              <a href="#/news" title="User" >
+                <img class="fullwidth figureImage" src="../images/news.png" alt="Portfolio Item">
+                <figcaption>
+                    <h3>Periódico</h3>
+                    <h4>Responder Encuesta</p>
+                </figcaption>
+              </a>
+            </figure>
+          </div>
+          <div class="figure-div">
+            <figure>
+              <a href="#/social" title="User" >
+                <img class="fullwidth figureImage" src="../images/social.png" alt="Portfolio Item">
+                <figcaption>
+                    <h3>Redes Sociales</h3>
+                    <h4>Responder Encuesta</p>
+                </figcaption>
+              </a>
+            </figure>
+          </div>
+          <div class="figure-div">
+            <figure>
+              <a href="#/movie" title="User" >
+                <img class="fullwidth figureImage" src="../images/movie.png" alt="Portfolio Item">
+                <figcaption>
+                    <h3>Películas</h3>
+                    <h4>Responder Encuesta</p>
+                </figcaption>
+              </a>
+            </figure>
+          </div>
+          <div class="figure-div">
+            <figure>
+              <a href="#/excel" title="User" >
+                <img class="fullwidth figureImage" src="../images/world.png" alt="Portfolio Item">
+                <figcaption>
+                    <h3>Demográfico</h3>
+                    <h4>Responder Encuesta</p>
+                </figcaption>
+              </a>
+            </figure>
+          </div>
+        </div>
+        <div class="phone">
+          <p>También puedes descargar la aplicación de celular para gestionar las encuestas</p>
+          <div class=full-width>
+            <a href><img class="appleimage" src="../images/apple.png" alt="phone"></a>
+          </div>
+          <div class=full-width>
+            <a href><img class="androidimage" src="../images/android.png" alt="phone"></a>
+          </div>
+        </div>
     </div>
-</div>
+  </div>
 
-<div ng-controller="HomeController" ng-show="!$sessionStorage.currentUser">
+<div ng-controller="HomeController" ng-show="!$localStorage.currentUser">
   <div  class = "container" ng-controller="NavbarController">
   	<div class="wrapper">
   		<form name="Login_Form" class="form-signin">

@@ -1,8 +1,8 @@
 angular.module('AngularScaffold.Controllers')
-  .controller('RegisterController', ['AuthService','$log','$location' ,'$scope', '$rootScope', '$sessionStorage',  function (authService, $log, $location ,$scope, $rootScope, $sessionStorage) {
+  .controller('RegisterController', ['AuthService','$log','$location' ,'$scope', '$rootScope', '$localStorage',  function (authService, $log, $location ,$scope, $rootScope, $localStorage) {
       $scope.user = {};
       $scope.users = [];
-      $scope.$sessionStorage = $sessionStorage;
+      $scope.$localStorage = $localStorage;
       $scope.wrongpass=false;
       $scope.wrongpass2=false;
       $scope.updateTable=false;

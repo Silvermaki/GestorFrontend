@@ -1,2 +1,92 @@
-<div ng-controller="TablesController" class="container color-white extra-padding round-corners">
+<div ng-controller="SurveyController" class="container color-white extra-padding round-corners" data-ng-init="getSurveys()">
+  <h1>Resultados de Encuestas</h1>
+  <hr class="colorgraph"><br>
+  <div class="row">
+      <div class="col-xs-10 extra-padding-bot">
+          <button type="button" ng-click="setTv()" class="btn btn-success extra"><span class="glyphicon glyphicon-refresh"></span> TV</span></button>
+          <button type="button" ng-click="setNews()" class="btn btn-warning"><span class="glyphicon glyphicon-refresh"></span> Periódico</span></button>
+          <button type="button" ng-click="setSocial()" class="btn btn-danger"><span  class="glyphicon glyphicon-refresh"></span> Social</span></button>
+          <button type="button" ng-click="setRadio()" class="btn btn-info color-purple "><span class="glyphicon glyphicon-refresh"></span> Radio</span></button>
+          <button type="button" ng-click="setMovie()" class="btn btn-info"><span  class="glyphicon glyphicon-refresh"></span> Película</span></button>
+      </div>
+  </div>
+  <div class="panel panel-primary overflowtable">
+    <table class="table table-striped table-hover table-responsive table-condensed" ng-show="tv">
+        <tr class="success">
+            <th>
+                <h4>Usuario</h4>
+            </th>
+            <th>
+                <h4>TV</h4>
+            </th>
+            <th>
+                <h4>Canal</h4>
+            </th>
+            <th>
+                <h4>Horario</h4>
+            </th>
+            <th>
+                <h4>Lugar</h4>
+            </th>
+        </tr>
+            <tr  ng-repeat="survey in surveys" class="info">
+                <td class="col-lg-2 col-xs-2" ng-if="survey.tipo =='Televisión'">
+                  {{survey.usuario}}
+                </td>
+                <td class="col-lg-2 col-xs-2" ng-if="survey.tipo =='Televisión'">
+                  {{survey.pregunta1}}
+                </td>
+                <td class="col-lg-2 col-xs-2" ng-if="survey.tipo =='Televisión'">
+                  {{survey.pregunta2}}
+                </td>
+                <td class="col-lg-2 col-xs-2" ng-if="survey.tipo =='Televisión'">
+                  {{survey.pregunta3}}
+                </td>
+                <td class="col-lg-2 col-xs-2" ng-if="survey.tipo =='Televisión'">
+                  {{survey.pregunta4}}
+                </td>
+            </tr>
+    </table>
+    <table class="table table-striped table-hover table-responsive table-condensed" ng-show="news">
+        <tr class="success">
+            <th>
+                <h4>Usuario</h4>
+            </th>
+            <th>
+                <h4>Periódico</h4>
+            </th>
+            <th>
+                <h4>Posesión</h4>
+            </th>
+            <th>
+                <h4>Marca</h4>
+            </th>
+            <th>
+                <h4>Tiempo</h4>
+            </th>
+            <th>
+                <h4>Lugar</h4>
+            </th>
+        </tr>
+            <tr  ng-repeat="survey in surveys" class="info">
+                <td class="col-lg-2 col-xs-2" ng-if="survey.tipo =='Periódico'">
+                  {{survey.usuario}}
+                </td>
+                <td class="col-lg-2 col-xs-2" ng-if="survey.tipo =='Periódico'">
+                  {{survey.pregunta1}}
+                </td>
+                <td class="col-lg-2 col-xs-2" ng-if="survey.tipo =='Periódico'">
+                  {{survey.pregunta2}}
+                </td>
+                <td class="col-lg-2 col-xs-2" ng-if="survey.tipo =='Periódico'">
+                  {{survey.pregunta3}}
+                </td>
+                <td class="col-lg-2 col-xs-2" ng-if="survey.tipo =='Periódico'">
+                  {{survey.pregunta4}}
+                </td>
+                <td class="col-lg-2 col-xs-2" ng-if="survey.tipo =='Periódico'">
+                  {{survey.pregunta5}}
+                </td>
+            </tr>
+    </table>
 </div>

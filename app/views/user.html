@@ -1,29 +1,28 @@
 <div ng-controller="RegisterController" class="container color-white extra-padding round-corners" data-ng-init="getUsers()">
   <h1>Usuarios</h1>
-  <div class="panel panel-primary">
-
-    <div class="row">
-        <div class="col-xs-12">
-            <a href="#/createuser"><button type="button"  class="btn btn-success col-lg-4 col-xs-4" ><span class="glyphicon glyphicon-plus"></span> Agregar Nuevo Usuario</span></button></a>
-            <button type="button"  ng-click="setSortUser()" class=" btn btn-warning col-lg-3 col-xs-3"  ><span class="glyphicon glyphicon-sort"></span> Nombre</span></button>
-            <button type="button"  ng-click="setSortRole()" class=" btn btn-warning col-lg-3 col-xs-3"  ><span class="glyphicon glyphicon-sort"></span> Tipo</span></button>
-            <button type="button"  ng-click="getUsers()" class="btn btn-info col-lg-2 col-xs-2"  ><span  class="glyphicon glyphicon-refresh"></span> Actualizar</span></button>
-        </div>
-    </div>
-
+  <hr class="colorgraph"><br>
+  <div class="row extra-padding-bot">
+      <div class="col-xs-12">
+          <a href="#/createuser"><button type="button"  class="btn btn-success" ><span class="glyphicon glyphicon-plus"></span> Nuevo Usuario</span></button></a>
+          <button type="button"  ng-click="setSortUser()" class=" btn btn-warning"  ><span class="glyphicon glyphicon-sort"></span> Nombre</span></button>
+          <button type="button"  ng-click="setSortRole()" class=" btn btn-warning"  ><span class="glyphicon glyphicon-sort"></span> Tipo</span></button>
+          <button type="button"  ng-click="getUsers()" class="btn btn-info"  ><span  class="glyphicon glyphicon-refresh"></span> Actualizar</span></button>
+      </div>
+  </div>
+  <div class="panel panel-primary overflowtable">
     <table class="table table-striped table-hover table-responsive table-condensed">
-        <tr>
+        <tr class="success">
             <th>
-                <h3>Usuario</h3>
+                <h4>Usuario</h4>
             </th>
             <th>
-                <h3>Tipo</h3>
+                <h4>Tipo</h4>
             </th>
             <th>
-                <h3>Administrar</h3>
+                <h4>Administrar</h4>
             </th>
         </tr>
-            <tr  ng-repeat="user in users | orderBy:sortType:sortReverse">
+            <tr  ng-repeat="user in users | orderBy:sortType:sortReverse" class="info">
                 <td class="col-lg-4 col-xs-4" ng-if="user.scope[0]=='regular'">
                     {{user.username}}
                 </td>
@@ -35,7 +34,6 @@
                 </td>
             </tr>
     </table>
-
 </div>
 
 <div class="checkbox-container">

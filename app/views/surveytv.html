@@ -1,0 +1,81 @@
+<div ng-controller="SurveyController">
+  <div  class = "container no-padding">
+  	<div class="wrapper">
+      <form class="form-signin">
+        <h1>Encuesta de Televisión</h1>
+        <hr class="colorgraph"><br>
+        <label class="extra-padding-top">1. ¿Ha visto TV nacional hoy?</label>
+        <select class="form-control" ng-model="survey.pregunta1">
+          <option>Sí</option>
+          <option>No</option>
+        </select>
+        <div ng-show="setVisibility()">
+          <label class="extra-padding-top">2. ¿Qué canal de TV vio?</label>
+          <select class="form-control" ng-model="survey.pregunta2">
+            <option>Canal 5</option>
+            <option>HCH TV</option>
+            <option>Globo TV</option>
+            <option>Canal 6</option>
+            <option>Telecadena 7 y 4</option>
+            <option>Canal 11</option>
+            <option>TEN Canal 10</option>
+            <option>Cholusat Sur</option>
+            <option>Hondured Canal 13</option>
+            <option>Televicentro Deportes</option>
+            <option>Teleceiba 7</option>
+            <option>Maya TV</option>
+            <option>Honduras 504</option>
+            <option>Choluvisión</option>
+            <option>STO Canal 32</option>
+            <option>Telesistema</option>
+            <option>Teleport</option>
+            <option>TV Centro Canal 67</option>
+            <option>Canal 12 TV</option>
+            <option>45 TV</option>
+          </select>
+          <label class="extra-padding-top">3. ¿En qué horario?</label>
+          <select class="form-control" ng-model="survey.pregunta3">
+            <option>12 am</option>
+            <option>1 am</option>
+            <option>2 am</option>
+            <option>3 am</option>
+            <option>4 am</option>
+            <option>5 am</option>
+            <option>6 am</option>
+            <option>7 am</option>
+            <option>8 am</option>
+            <option>9 am</option>
+            <option>10 am</option>
+            <option>11 am</option>
+            <option>12 pm</option>
+            <option>1 pm</option>
+            <option>2 pm</option>
+            <option>3 pm</option>
+            <option>4 pm</option>
+            <option>5 pm</option>
+            <option>6 pm</option>
+            <option>7 pm</option>
+            <option>8 pm</option>
+            <option>9 pm</option>
+            <option>10 pm</option>
+            <option>11 pm</option>
+          </select>
+          <label class="extra-padding-top">4. ¿En dónde lo vió?</label>
+          <select class="form-control" ng-model="survey.pregunta4">
+            <option>Casa</option>
+            <option>Trabajo</option>
+            <option>PC</option>
+            <option>Dispositivo Móvil</option>
+            <option>Restaurante</option>
+            <option>Sala de Espera</option>
+            <option>Calle</option>
+            <option>Otro</option>
+          </select>
+        </div>
+        <p></p>
+        <button ng-show="setVisibility2()" type="submit" class="btn btn-lg btn-success btn-block"  ng-click="postSurvey('Televisión')"><span class="glyphicon glyphicon-ok"></span> Finalizar</button>
+        <button type="submit" class="btn btn-lg btn-danger btn-block"  ng-click="goHome()"><span class="glyphicon glyphicon-remove"></span> Cancelar</button>
+      </form>
+    </div>
+  </div>
+</div>

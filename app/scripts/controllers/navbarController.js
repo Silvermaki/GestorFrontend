@@ -1,12 +1,12 @@
 angular.module('AngularScaffold.Controllers')
-  .controller('NavbarController', ['AuthService','$location','$scope', '$rootScope', '$sessionStorage',  function (authService,$location, $scope, $rootScope, $sessionStorage) {
+  .controller('NavbarController', ['AuthService','$location','$scope', '$rootScope', '$localStorage',  function (authService,$location, $scope, $rootScope, $localStorage) {
       $scope.user = {};
-      $scope.$sessionStorage = $sessionStorage;
+      $scope.$localStorage = $localStorage;
       $scope.wronglogin=false;
 
       $scope.logout = function(){
         authService.Logout().then(function(response){
-          $sessionStorage.$reset();
+          $localStorage.$reset();
           $location.path('#/home');
         }).catch(function(err){
 
@@ -15,7 +15,7 @@ angular.module('AngularScaffold.Controllers')
 
       $scope.login = function(user){
         authService.Login(user).then(function(response){
-          $sessionStorage.currentUser = response.data;
+          $localStorage.currentUser = response.data;
           $scope.user = {};
         }).catch(function(err){
           $scope.wronglogin=true;

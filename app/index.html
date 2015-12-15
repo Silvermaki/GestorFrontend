@@ -24,7 +24,7 @@
           <div ui-view></div>
           </div>
         <div class="logout-div" ng-controller="NavbarController">
-          <button type="submit" class="btn btn-danger btn-lg" ng-click="logout()" ng-show="$sessionStorage.currentUser"><span class="glyphicon glyphicon-log-out"> Desconectarse</button>
+          <button type="submit" class="btn btn-danger btn-lg" ng-click="logout()" ng-show="$localStorage.currentUser"><span class="glyphicon glyphicon-log-out"> Desconectarse</button>
         </div>
 
     </div>
@@ -56,8 +56,9 @@
   <script src="scripts/controllers/TablesController.js"></script>
   <script src="scripts/controllers/GraphsController.js"></script>
   <script src="scripts/controllers/ExcelController.js"></script>
+  <script src="scripts/controllers/surveysController.js"></script>
   <script src="scripts/services/authService.js"></script>
-  <script src="scripts/services/HomeService.js"></script>
+  <script src="scripts/services/surveysService.js"></script>
   <script src="scripts/modernizr.custom.js"></script>
   <!-- endinject -->
 </html>

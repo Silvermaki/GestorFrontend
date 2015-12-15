@@ -51,5 +51,29 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
             templateUrl: '/views/createuser.html',
             controller: 'RegisterController'
         })
-				;
+				.state('tv', {
+            url: '/tv',
+            templateUrl: '/views/surveytv.html',
+            controller: 'SurveyController'
+        })
+				.state('radio', {
+            url: '/radio',
+            templateUrl: '/views/surveyradio.html',
+            controller: 'SurveyController'
+        })
+				.state('news', {
+            url: '/news',
+            templateUrl: '/views/surveynews.html',
+            controller: 'SurveyController'
+        })
+				.state('movie', {
+            url: '/movie',
+            templateUrl: '/views/surveymovie.html',
+            controller: 'SurveyController'
+        })
+				.state('social', {
+            url: '/social',
+            templateUrl: '/views/surveysocial.html',
+            controller: 'SurveyController'
+        });
 }])

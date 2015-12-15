@@ -1,0 +1,56 @@
+<div ng-controller="SurveyController">
+  <div  class = "container no-padding">
+  	<div class="wrapper">
+      <form class="form-signin">
+        <h1>Encuesta de Periódicos</h1>
+        <hr class="colorgraph"><br>
+        <label class="extra-padding-top">1. ¿Ha visto el periódico impreso hoy?</label>
+        <select class="form-control" ng-model="survey.pregunta1">
+          <option>Sí</option>
+          <option>No</option>
+        </select>
+        <div ng-show="setVisibility()">
+          <label class="extra-padding-top">2. ¿Cómo obtuvo el periódico?</label>
+          <select class="form-control" ng-model="survey.pregunta2">
+            <option>Lo Compré</option>
+            <option>Lo Leí Gratuitamente</option>
+            <option>Tengo Suscripción</option>
+            <option>Me lo Facilitaron</option>
+          </select>
+          <label class="extra-padding-top">3. ¿Qué periódico leyó?</label>
+          <select class="form-control" ng-model="survey.pregunta3">
+            <option>La Tribuna</option>
+            <option>El Heraldo</option>
+            <option>Diez</option>
+            <option>Diario Más</option>
+            <option>La Prensa</option>
+            <option>Diario Tiempo</option>
+            <option>La Verdad</option>
+          </select>
+          <label class="extra-padding-top">4. ¿Por cuánto tiempo?</label>
+          <select class="form-control" ng-model="survey.pregunta4">
+            <option>10 minutos o menos</option>
+            <option>20 minutos</option>
+            <option>30 minutos</option>
+            <option>45 minutos</option>
+            <option>60 minutos</option>
+            <option>90 minutos</option>
+            <option>120 minutos</option>
+            <option>Más de 120 minutos</option>
+          </select>
+          <label class="extra-padding-top">5. ¿En dónde lo leyó?</label>
+          <select class="form-control" ng-model="survey.pregunta5">
+            <option>Casa</option>
+            <option>Restaurante</option>
+            <option>Sala de Espera</option>
+            <option>Calle</option>
+            <option>Otro</option>
+          </select>
+        </div>
+        <p></p>
+        <button ng-show="setVisibility2()" type="submit" class="btn btn-lg btn-success btn-block"  ng-click="postSurvey('Periódico')"><span class="glyphicon glyphicon-ok"></span> Finalizar</button>
+        <button type="submit" class="btn btn-lg btn-danger btn-block"  ng-click="goHome()"><span class="glyphicon glyphicon-remove"></span> Cancelar</button>
+      </form>
+    </div>
+  </div>
+</div>
