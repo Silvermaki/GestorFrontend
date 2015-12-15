@@ -1,3 +1,4 @@
+<div ng-controller="HomeController" ng-show="isAdmin()">
 <div ng-controller="SurveyController" class="container color-white extra-padding round-corners" data-ng-init="getSurveys()">
   <h1>Resultados de Encuestas</h1>
   <hr class="colorgraph"><br>
@@ -89,4 +90,119 @@
                 </td>
             </tr>
     </table>
+    <table class="table table-striped table-hover table-responsive table-condensed" ng-show="social">
+        <tr class="success">
+            <th>
+                <h4>Usuario</h4>
+            </th>
+            <th>
+                <h4>Red Social</h4>
+            </th>
+            <th>
+                <h4>Cúal Red</h4>
+            </th>
+            <th>
+                <h4>Tiempo</h4>
+            </th>
+            <th>
+                <h4>Medio</h4>
+            </th>
+        </tr>
+            <tr  ng-repeat="survey in surveys" class="info">
+                <td class="col-lg-2 col-xs-2" ng-if="survey.tipo =='Redsocial'">
+                  {{survey.usuario}}
+                </td>
+                <td class="col-lg-2 col-xs-2" ng-if="survey.tipo =='Redsocial'">
+                  {{survey.pregunta1}}
+                </td>
+                <td class="col-lg-2 col-xs-2" ng-if="survey.tipo =='Redsocial'">
+                  {{survey.pregunta2}}
+                </td>
+                <td class="col-lg-2 col-xs-2" ng-if="survey.tipo =='Redsocial'">
+                  {{survey.pregunta3}}
+                </td>
+                <td class="col-lg-2 col-xs-2" ng-if="survey.tipo =='Redsocial'">
+                  {{survey.pregunta4}}
+                </td>
+            </tr>
+    </table>
+    <table class="table table-striped table-hover table-responsive table-condensed" ng-show="radio">
+        <tr class="success">
+            <th>
+                <h4>Usuario</h4>
+            </th>
+            <th>
+                <h4>Radio</h4>
+            </th>
+            <th>
+                <h4>Estación</h4>
+            </th>
+            <th>
+                <h4>Hora</h4>
+            </th>
+            <th>
+                <h4>Lugar</h4>
+            </th>
+        </tr>
+            <tr  ng-repeat="survey in surveys" class="info">
+                <td class="col-lg-2 col-xs-2" ng-if="survey.tipo =='Radio'">
+                  {{survey.usuario}}
+                </td>
+                <td class="col-lg-2 col-xs-2" ng-if="survey.tipo =='Radio'">
+                  {{survey.pregunta1}}
+                </td>
+                <td class="col-lg-2 col-xs-2" ng-if="survey.tipo =='Radio'">
+                  {{survey.pregunta2}}
+                </td>
+                <td class="col-lg-2 col-xs-2" ng-if="survey.tipo =='Radio'">
+                  {{survey.pregunta3}}
+                </td>
+                <td class="col-lg-2 col-xs-2" ng-if="survey.tipo =='Radio'">
+                  {{survey.pregunta4}}
+                </td>
+            </tr>
+    </table>
+    <table class="table table-striped table-hover table-responsive table-condensed" ng-show="movie">
+        <tr class="success">
+            <th>
+                <h4>Usuario</h4>
+            </th>
+            <th>
+                <h4>Película</h4>
+            </th>
+            <th>
+                <h4>Sala</h4>
+            </th>
+            <th>
+                <h4>Día</h4>
+            </th>
+            <th>
+                <h4>Hora</h4>
+            </th>
+            <th>
+                <h4>Entrada</h4>
+            </th>
+        </tr>
+            <tr  ng-repeat="survey in surveys" class="info">
+                <td class="col-lg-2 col-xs-2" ng-if="survey.tipo =='Película'">
+                  {{survey.usuario}}
+                </td>
+                <td class="col-lg-2 col-xs-2" ng-if="survey.tipo =='Película'">
+                  {{survey.pregunta1}}
+                </td>
+                <td class="col-lg-2 col-xs-2" ng-if="survey.tipo =='Película'">
+                  {{survey.pregunta2}}
+                </td>
+                <td class="col-lg-2 col-xs-2" ng-if="survey.tipo =='Película'">
+                  {{survey.pregunta3}}
+                </td>
+                <td class="col-lg-2 col-xs-2" ng-if="survey.tipo =='Película'">
+                  {{survey.pregunta4}}
+                </td>
+                <td class="col-lg-2 col-xs-2" ng-if="survey.tipo =='Película'">
+                  {{survey.pregunta5}}
+                </td>
+            </tr>
+    </table>
+</div>
 </div>

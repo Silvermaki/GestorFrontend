@@ -1,3 +1,4 @@
+<div ng-controller="HomeController" ng-show="isAdmin()">
 <div ng-controller="RegisterController" class="container color-white extra-padding round-corners" data-ng-init="getUsers()">
   <h1>Usuarios</h1>
   <hr class="colorgraph"><br>
@@ -41,4 +42,5 @@
     <label class = "extra-padding" ng-repeat="roleName in roles"><input type="checkbox" name="selectedRoles[]" value="{{roleName}}" ng-checked="selection.indexOf(roleName) > -1" ng-click="toggleSelection(roleName)"> {{roleName}}</label>
 <h4 class="color-blue" ng-show="updateTable">Operación exitosa, para ver los cambios actualice la tabla.</h4>
     </div>
+</div>
 </div>
