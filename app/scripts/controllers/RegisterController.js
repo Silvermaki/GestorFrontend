@@ -40,9 +40,10 @@ angular.module('AngularScaffold.Controllers')
 
       $scope.toggleSelection = function toggleSelection(roleName) {
         var idx = $scope.selection.indexOf(roleName);
+        var idx2 = $scope.selectedDelete.indexOf(roleName);
         if (idx > -1) {
           $scope.selection.splice(idx, 1);
-          $scope.selectedDelete.splice(idx,1);
+          $scope.selectedDelete.splice(idx2,1);
         }
         else {
           $scope.selection.push(roleName);
