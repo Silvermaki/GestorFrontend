@@ -91,7 +91,7 @@ angular.module('AngularScaffold.Controllers')
       $scope.deleteRole = function(){
         console.log($scope.selectedDelete);
         $http.post('https://project-backend.herokuapp.com/v1/deleterole',$scope.selectedDelete).success(function(){
-          console.log("success");
+          $scope.selectedDelete = [];
           window.location.reload();
         });
       }

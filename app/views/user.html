@@ -41,7 +41,7 @@
   <h4>Selecione el listado de roles que desea asignar:</h4>
     <label class = "extra-padding" ng-repeat="roleName in roles"><input type="checkbox" name="selectedRoles[]" value="{{roleName}}" ng-checked="selection.indexOf(roleName) > -1" ng-click="toggleSelection(roleName)"> {{roleName}}</label>
     <br><a href="#/createRole"><button type="button" class="btn btn-success" >Crear Rol</button></a>
-    <a><button type="button" ng-click="deleteRole()" class="btn btn-success" >Eliminar Roles</button></a>
+    <a><button type="button" ng-click="deleteRole()" class="btn btn-success" >Eliminar Roles Seleccionados</button></a>
 <h4 class="color-blue" ng-show="updateTable">Operación exitosa, para ver los cambios actualice la tabla.</h4>
     </div>
 </div>
