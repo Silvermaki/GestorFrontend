@@ -42,6 +42,7 @@ angular.module('AngularScaffold.Controllers')
         var idx = $scope.selection.indexOf(roleName);
         if (idx > -1) {
           $scope.selection.splice(idx, 1);
+          $scope.selectedDelete.splice(idx,1);
         }
         else {
           $scope.selection.push(roleName);
