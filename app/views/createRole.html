@@ -1,0 +1,13 @@
+
+<div ng-controller="RoleController">
+	<div class="wrapper" >
+    		<form name="Role_Form" class="form-signin">
+    		    <h1 class="form-signin-heading">Crear Rol</h1>
+    			  <hr class="colorgraph"><br>
+            	<p>Rol:</p>
+    			  <input type="text" class="form-control" name="name" placeholder="Rol" required="" autofocus="" ng-model="role.name">    			  
+    			  <button type="submit" class="btn btn-lg btn-primary btn-block" ng-click="create()"><span class="glyphicon glyphicon-ok"></span> Crear</button>
+            <a href="#/user"><button type="submit" class="btn btn-lg btn-danger btn-block"><span class="glyphicon glyphicon-remove"></span> Cancelar</button></a>
+    		</form>
+    	</div>
+</div>

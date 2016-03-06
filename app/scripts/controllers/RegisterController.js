@@ -1,17 +1,24 @@
 angular.module('AngularScaffold.Controllers')
-  .controller('RegisterController', ['AuthService','$log','$location' ,'$scope', '$rootScope', '$localStorage',  function (authService, $log, $location ,$scope, $rootScope, $localStorage) {
+  .controller('RegisterController', ['AuthService','$log','$location' ,'$scope', '$rootScope', '$localStorage', '$http' ,function (authService, $log, $location ,$scope, $rootScope, $localStorage, $http) {
       $scope.user = {};
       $scope.users = [];
       $scope.$localStorage = $localStorage;
       $scope.wrongpass=false;
       $scope.wrongpass2=false;
       $scope.updateTable=false;
-      $scope.roles = ['Televisión', 'Radio', 'Sociales', 'Periódico', 'Cine'];
+      $scope.roles = [];
       $scope.selection = ['regular'];
+      $scope.selectedDelete = [];
       $scope.selecteduser = {};
       $scope.$log = $log;
       $scope.sortType = 'username'; // set the default sort type
       $scope.sortReverse  = false;
+
+      $http.get('https://project-backend.herokuapp.com/v1/roles').success(function(data) {
+        for(i = 0; i<data.length; i++)
+          $scope.roles.push(data[i].name);
+        
+      });
 
       $scope.changeReverse = function(){
         if($scope.sortReverse == false){
@@ -38,6 +45,7 @@ angular.module('AngularScaffold.Controllers')
         }
         else {
           $scope.selection.push(roleName);
+          $scope.selectedDelete.push(roleName);
         }
       }
 
@@ -79,5 +87,12 @@ angular.module('AngularScaffold.Controllers')
         }).catch(function(err){
           $scope.wrongpass2=true;
         })
+      }
+      $scope.deleteRole = function(){
+        console.log($scope.selectedDelete);
+        $http.post('https://project-backend.herokuapp.com/v1/deleterole',$scope.selectedDelete).success(function(){
+          console.log("success");
+          window.location.reload();
+        });
       }
   }]);
