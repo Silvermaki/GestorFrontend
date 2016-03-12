@@ -1,0 +1,19 @@
+<script type="text/javascript">
+  $('select').select2();
+</script>
+  <div ng-controller="deleteSurveyController">
+    	<div class="wrapper">
+    		<form name="Survey_Form" class="form-signin">                
+    		    <h1 class="form-signin-heading">Borrar Encuesta</h1>
+    			  <hr class="colorgraph"><br>
+            
+            <p>Escoja un rol del cual desea borrar la encuesta: </p>
+                  <select class="roles" ng-model = "currentRol" ng-options="rol for rol in roles" style="width: 100%">
+                  </select><br>
+                  <br>
+            
+    			  <button type="submit" class="btn btn-lg btn-primary btn-block"  ng-click="borrarEncuesta()"><span class="glyphicon glyphicon-ok"></span> Borrar Encuesta</button>
+            <a href="#/home"><button type="submit" class="btn btn-lg btn-danger btn-block"><span class="glyphicon glyphicon-remove"></span> Cancelar</button></a>
+    		</form>
+    	</div>
+  </div>

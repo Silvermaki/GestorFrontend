@@ -1,0 +1,22 @@
+
+<div ng-controller="HomeController" >
+<div ng-controller="SurveyController">
+  <div  class = "container no-padding">
+  	<div class="wrapper">
+      <form class="form-signin">
+        <h1 ng-click="prueba()">Encuesta </h1>
+        <hr class="colorgraph"><br>
+        <div ng-repeat="pregunta in currentSurvey.preguntas">
+            <label class="extra-padding-top">{{pregunta.consulta}}</label>
+            <select  ng-model = "respuestas[$index]" ng-options="opcion for opcion in pregunta.opciones" style="width: 100%">
+
+            </select><br>
+        </div>
+        <br><br>
+        <button type="submit" class="btn btn-lg btn-primary btn-block"  ng-click="ingresarEncuesta()"><span class="glyphicon glyphicon-ok"></span> Ingresar Datos</button>
+            <a href="#/home"><button type="submit" class="btn btn-lg btn-danger btn-block"><span class="glyphicon glyphicon-remove"></span> Cancelar</button></a>
+      </form>
+    </div>
+  </div>
+</div>
+</div>

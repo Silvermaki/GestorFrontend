@@ -37,6 +37,17 @@
       </div>
       <div class="figure-div">
         <figure>
+          <a href="#/createSurvey" title="User" >
+            <img class="fullwidth figureImage" src="../images/world.png" alt="Portfolio Item">
+            <figcaption>
+                <h3>Encuestas</h3>
+                <h4>Crear una nueva encuesta</p>
+            </figcaption>
+          </a>
+        </figure>
+      </div>
+      <div class="figure-div">
+        <figure>
           <a href="#/excel" title="User" >
             <img class="fullwidth figureImage" src="../images/excel.png" alt="Portfolio Item">
             <figcaption>
@@ -46,6 +57,17 @@
           </a>
         </figure>
       </div>
+      <div class="figure-div">
+        <figure>
+          <a href="#/deleteSurvey" title="User" >
+            <img class="fullwidth figureImage" src="../images/world.png" alt="Portfolio Item">
+            <figcaption>
+                <h3>Eliminar</h3>
+                <h4>Eliminar encuestas creadas</p>
+            </figcaption>
+          </a>
+        </figure>
+      </div>      
     </div>
 </div>
 
@@ -54,72 +76,18 @@
       <h1>Encuestas</h1>
       <hr class="colorgraph"><br>
         <div class="figure-div-small">
-          <div class="figure-div" ng-show="isTv()">
+          <div class="figure-div" ng-repeat="survey in surveys">
             <figure>
-              <a href="#/tv" title="User" >
-                <img class="fullwidth figureImage" src="../images/tv.png" alt="Portfolio Item">
-                <figcaption>
-                    <h3>Televisión</h3>
-                    <h4>Responder Encuesta</p>
-                </figcaption>
-              </a>
-            </figure>
-          </div>
-          <div class="figure-div" ng-show="isRadio()">
-            <figure>
-              <a href="#/radio" title="User" >
-                <img class="fullwidth figureImage" src="../images/radio.png" alt="Portfolio Item">
-                <figcaption>
-                    <h3>Radio</h3>
-                    <h4>Responder Encuesta</p>
-                </figcaption>
-              </a>
-            </figure>
-          </div>
-          <div class="figure-div" ng-show="isNews()">
-            <figure>
-              <a href="#/news" title="User" >
-                <img class="fullwidth figureImage" src="../images/news.png" alt="Portfolio Item">
-                <figcaption>
-                    <h3>Periódico</h3>
-                    <h4>Responder Encuesta</p>
-                </figcaption>
-              </a>
-            </figure>
-          </div>
-          <div class="figure-div" ng-show="isSocial()">
-            <figure>
-              <a href="#/social" title="User" >
-                <img class="fullwidth figureImage" src="../images/social.png" alt="Portfolio Item">
-                <figcaption>
-                    <h3>Redes Sociales</h3>
-                    <h4>Responder Encuesta</p>
-                </figcaption>
-              </a>
-            </figure>
-          </div>
-          <div class="figure-div" ng-show="isMovie()">
-            <figure>
-              <a href="#/movie" title="User" >
-                <img class="fullwidth figureImage" src="../images/movie.png" alt="Portfolio Item">
-                <figcaption>
-                    <h3>Películas</h3>
-                    <h4>Responder Encuesta</p>
-                </figcaption>
-              </a>
-            </figure>
-          </div>
-          <div class="figure-div">
-            <figure>
-              <a href="" title="User" >
+              <a href="#/survey" title="User" ng-click="select(survey.tipo)">
                 <img class="fullwidth figureImage" src="../images/world.png" alt="Portfolio Item">
                 <figcaption>
-                    <h3>Demográfico</h3>
+                    <h3>{{survey.tipo}}</h3>
                     <h4>Responder Encuesta</p>
                 </figcaption>
               </a>
             </figure>
           </div>
+          
         </div>
         <div class="phone">
           <p>También puedes descargar la aplicación de celular para gestionar las encuestas</p>

@@ -1,27 +1,26 @@
 angular.module('AngularScaffold.Controllers')
-  .controller('HomeController', ['$scope', '$localStorage', function ($scope, $localStorage) {
+  .controller('HomeController', ['$http','$scope', '$localStorage', 'RoleService',function ($http,$scope, $localStorage,RoleService) {
+    $scope.surveys = [];
 
+    $http.get('https://project-backend.herokuapp.com/v1/roles').success(function(data) {
+        var roles = [];
+        for(i = 0; i<data.length; i++){
+          roles.push(data[i].name);
+        }
+          RoleService.setRoles(roles);
+      });
+    $http.get('https://project-backend.herokuapp.com/v1/surveyModels').success(function(data) {
+        $scope.surveys = data;
+      });
+      $scope.select = function(tipo){
+        RoleService.setCurrentRole(tipo);
+      }
 
       $scope.isAdmin = function(){
         return $localStorage.currentUser && $localStorage.currentUser.scope.indexOf('admin') > -1;
       }
       $scope.isRegular = function(){
         return $localStorage.currentUser && $localStorage.currentUser.scope.indexOf('regular') > -1;
-      }
-      $scope.isTv = function(){
-        return $localStorage.currentUser && $localStorage.currentUser.scope.indexOf('Televisión') > -1;
-      }
-      $scope.isRadio = function(){
-        return $localStorage.currentUser && $localStorage.currentUser.scope.indexOf('Radio') > -1;
-      }
-      $scope.isNews = function(){
-        return $localStorage.currentUser && $localStorage.currentUser.scope.indexOf('Periódico') > -1;
-      }
-      $scope.isSocial = function(){
-        return $localStorage.currentUser && $localStorage.currentUser.scope.indexOf('Sociales') > -1;
-      }
-      $scope.isMovie = function(){
-        return $localStorage.currentUser && $localStorage.currentUser.scope.indexOf('Cine') > -1;
       }
 
   }]);

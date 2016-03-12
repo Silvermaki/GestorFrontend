@@ -1,5 +1,5 @@
 angular.module('AngularScaffold.Controllers')
-  .controller('RegisterController', ['AuthService','$log','$location' ,'$scope', '$rootScope', '$localStorage', '$http' ,function (authService, $log, $location ,$scope, $rootScope, $localStorage, $http) {
+  .controller('RegisterController', ['AuthService','RoleService','$log','$location' ,'$scope', '$rootScope', '$localStorage', '$http' ,function (authService,RoleService ,$log, $location ,$scope, $rootScope, $localStorage, $http) {
       $scope.user = {};
       $scope.users = [];
       $scope.$localStorage = $localStorage;
@@ -15,9 +15,10 @@ angular.module('AngularScaffold.Controllers')
       $scope.sortReverse  = false;
 
       $http.get('https://project-backend.herokuapp.com/v1/roles').success(function(data) {
-        for(i = 0; i<data.length; i++)
+        for(i = 0; i<data.length; i++){
           $scope.roles.push(data[i].name);
-        
+        }
+          RoleService.setRoles($scope.roles);
       });
 
       $scope.changeReverse = function(){

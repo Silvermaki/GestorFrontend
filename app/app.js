@@ -77,6 +77,21 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
             templateUrl: '/views/surveysocial.html',
             controller: 'SurveyController'
         })
+                .state('survey', {
+            url: '/survey',
+            templateUrl: '/views/survey.html',
+            controller: 'SurveyController'
+        })
+                .state('createSurvey', {
+            url: '/createSurvey',
+            templateUrl: '/views/createSurvey.html',
+            controller: 'createSurveyController'
+        })
+                        .state('deleteSurvey', {
+            url: '/deleteSurvey',
+            templateUrl: '/views/deleteSurvey.html',
+            controller: 'deleteSurveyController'
+        })
                 .state('createRole', {
             url: '/createRole',
             templateUrl: '/views/createRole.html',

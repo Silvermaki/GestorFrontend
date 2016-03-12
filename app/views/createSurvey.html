@@ -1,0 +1,32 @@
+<script type="text/javascript">
+  $('select').select2();
+</script>
+  <div ng-controller="createSurveyController">
+    	<div class="wrapper">
+    		<form name="Survey_Form" class="form-signin">                
+    		    <h1 class="form-signin-heading">Crear Encuesta</h1>
+    			  <hr class="colorgraph"><br>
+                <p>Ingrese la pregunta que desea agregar:</p>
+    			  <input type="text" class="form-control" name="consulta" placeholder="Pregunta" autofocus="" ng-model="consulta"/><br>
+                  <p>Ingrese las posibles respuestas a la pregunta separadas por coma:</p>
+                  <input type="text" class="form-control" name="opciones" placeholder="Respuesta1,Respuesta2, Respuesta1 ..."  autofocus="" ng-model="opciones"/><br>
+
+            <button type="button" class="btn btn-success btn-block" ng-click="agregarPregunta()">Agregar Pregunta a Encuesta</button>
+            <br>
+            <h2 class="form-signin-heading">Preguntas en Encuesta</h2>
+            <div ng-repeat="pregunta in preguntas">
+              <h5 class="form-signin-heading">Pregunta: {{pregunta.consulta}}</h5> 
+              <h5 class="form-signin-heading">Opciones: {{pregunta.opciones}}</h5>  
+              <br>            
+            </div>
+            <br>
+            <p>Escoja un rol: </p>
+                  <select class="roles" ng-model = "currentRol" ng-options="rol for rol in roles" style="width: 100%">
+                  </select><br>
+                  <br>
+            
+    			  <button type="submit" class="btn btn-lg btn-primary btn-block"  ng-click="crearEncuesta()"><span class="glyphicon glyphicon-ok"></span> Crear Encuesta</button>
+            <a href="#/home"><button type="submit" class="btn btn-lg btn-danger btn-block"><span class="glyphicon glyphicon-remove"></span> Cancelar</button></a>
+    		</form>
+    	</div>
+  </div>

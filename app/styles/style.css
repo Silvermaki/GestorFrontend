@@ -361,3 +361,7 @@ over {
 	#nav a:hover {
 		border-bottom: none;
 	}
+
+element {
+    width: 100%;
+}
