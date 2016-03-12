@@ -17,6 +17,8 @@ angular.module('AngularScaffold.Controllers')
         authService.Login(user).then(function(response){
           $localStorage.currentUser = response.data;
           $scope.user = {};
+          $scope.$emit("filterSurveys");
+
         }).catch(function(err){
           $scope.wronglogin=true;
         });

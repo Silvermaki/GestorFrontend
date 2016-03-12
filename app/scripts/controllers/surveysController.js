@@ -12,7 +12,7 @@ angular.module('AngularScaffold.Controllers')
         //console.log(RoleService.getCurrentRole());
          $scope.temp = $scope.surveys.filter(function( obj ) {
             //console.log(obj.tipo);
-            return obj.tipo == RoleService.getCurrentRole();
+            return obj.nombre == RoleService.getCurrentNombre();
           });
          $scope.currentSurvey = $scope.temp[0];
       });
@@ -31,6 +31,7 @@ angular.module('AngularScaffold.Controllers')
 
       $scope.ingresarEncuesta = function(type){
         $scope.survey.usuario=$localStorage.currentUser.username;
+        $scope.survey.nombre = RoleService.getCurrentNombre();
         $scope.survey.tipo = RoleService.getCurrentRole();
         $scope.survey.respuestas = $scope.respuestas;
         console.log($scope.survey);

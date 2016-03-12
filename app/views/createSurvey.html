@@ -6,7 +6,7 @@
     		<form name="Survey_Form" class="form-signin">                
     		    <h1 class="form-signin-heading">Crear Encuesta</h1>
     			  <hr class="colorgraph"><br>
-                <p>Ingrese la pregunta que desea agregar:</p>
+            <p>Ingrese la pregunta que desea agregar:</p>
     			  <input type="text" class="form-control" name="consulta" placeholder="Pregunta" autofocus="" ng-model="consulta"/><br>
                   <p>Ingrese las posibles respuestas a la pregunta separadas por coma:</p>
                   <input type="text" class="form-control" name="opciones" placeholder="Respuesta1,Respuesta2, Respuesta1 ..."  autofocus="" ng-model="opciones"/><br>
@@ -20,6 +20,8 @@
               <br>            
             </div>
             <br>
+            <p>Ingrese el nombre de la encuesta:</p>
+            <input type="text" class="form-control" name="nombre" placeholder="Nombre" autofocus="" ng-model="nombre"/><br>
             <p>Escoja un rol: </p>
                   <select class="roles" ng-model = "currentRol" ng-options="rol for rol in roles" style="width: 100%">
                   </select><br>

@@ -2,13 +2,13 @@
   $('select').select2();
 </script>
   <div ng-controller="deleteSurveyController">
-    	<div class="wrapper">
+    	<div class="wrapper" ng-click="prueba()">
     		<form name="Survey_Form" class="form-signin">                
     		    <h1 class="form-signin-heading">Borrar Encuesta</h1>
     			  <hr class="colorgraph"><br>
             
-            <p>Escoja un rol del cual desea borrar la encuesta: </p>
-                  <select class="roles" ng-model = "currentRol" ng-options="rol for rol in roles" style="width: 100%">
+            <p>Escoja el nombre de la encuesta que desea borrar: </p>
+                  <select class="roles" ng-model = "currentSurvey" ng-options="survey.nombre for survey in surveys" style="width: 100%">
                   </select><br>
                   <br>
             

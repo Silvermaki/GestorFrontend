@@ -78,10 +78,11 @@
         <div class="figure-div-small">
           <div class="figure-div" ng-repeat="survey in surveys">
             <figure>
-              <a href="#/survey" title="User" ng-click="select(survey.tipo)">
+              <a href="#/survey" title="User" ng-click="select(survey.tipo,survey.nombre)">
                 <img class="fullwidth figureImage" src="../images/world.png" alt="Portfolio Item">
                 <figcaption>
                     <h3>{{survey.tipo}}</h3>
+                    <h3>{{survey.nombre}}</h3>
                     <h4>Responder Encuesta</p>
                 </figcaption>
               </a>

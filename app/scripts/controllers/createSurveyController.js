@@ -5,6 +5,7 @@ angular.module('AngularScaffold.Controllers')
 	$scope.preguntas = [];
 	$scope.roles = RoleService.getRoles();
 	$scope.currentRol = "";
+	$scope.nombre = "";
 
 	$scope.agregarPregunta = function(){
 		var respuestas = $scope.opciones.split(",");
@@ -17,7 +18,8 @@ angular.module('AngularScaffold.Controllers')
 	}
 
 	$scope.crearEncuesta = function(){
-		var encuesta = {tipo: $scope.currentRol, preguntas: $scope.preguntas};
+		var encuesta = {nombre: $scope.nombre, tipo: $scope.currentRol, preguntas: $scope.preguntas};
+		console.log(encuesta);
 		$http.post('https://project-backend.herokuapp.com/v1/surveyModel',encuesta).success(function (){
         	console.log("success");
         	window.location.href = '#/home'

@@ -6,6 +6,7 @@
       <form class="form-signin">
         <h1 ng-click="prueba()">Encuesta </h1>
         <hr class="colorgraph"><br>
+        <label class="extra-padding-top">{{currentSurvey.nombre}}</label>
         <div ng-repeat="pregunta in currentSurvey.preguntas">
             <label class="extra-padding-top">{{pregunta.consulta}}</label>
             <select  ng-model = "respuestas[$index]" ng-options="opcion for opcion in pregunta.opciones" style="width: 100%">
