@@ -12,23 +12,26 @@ angular.module('AngularScaffold.Controllers')
           RoleService.setRoles(roles);
       });
 
-    $scope.$on("filterSurveys",function(){
-        //console.log($localStorage.currentUser.scope);
+    $scope.$on("filterSurveys",function(){        
         if($localStorage.currentUser){
-        for(i=0;i<$scope.surveys.length; i++){
-        permit = false;
-        for(j=0;j<$localStorage.currentUser.scope.length; j++){
-          if($scope.surveys[i].tipo == $localStorage.currentUser.scope[j]){
-            permit = true;
-          }
+          //console.log($localStorage.currentUser.scope);
+          var temp = [];
+          for(i=0;i<$scope.surveys.length; i++){
+            permit = false;
+            for(j=0;j<$localStorage.currentUser.scope.length; j++){
+              if($scope.surveys[i].tipo == $localStorage.currentUser.scope[j]){
+                permit = true;
+              }
+            }
+            //console.log($scope.surveys[i].tipo+" "+permit);
+            if(permit == true){
+              //temp.splice(i,1);
+              temp.push($scope.surveys[i]);
+            }
         }
-        //console.log($scope.surveys[i].tipo+" "+permit);
-        if(permit == false){
-          $scope.surveys.splice(i,1);
-        }
-      }
-      //console.log($scope.surveys);
-     $scope.$$phase || $scope.$apply();
+        //console.log($scope.surveys);
+        $scope.surveys = temp;
+        $scope.$$phase || $scope.$apply();
       }
       });
       
