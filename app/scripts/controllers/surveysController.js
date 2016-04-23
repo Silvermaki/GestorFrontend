@@ -34,15 +34,16 @@ angular.module('AngularScaffold.Controllers')
         $scope.survey.nombre = RoleService.getCurrentNombre();
         $scope.survey.tipo = RoleService.getCurrentRole();
         $scope.survey.respuestas = $scope.respuestas;
-        console.log($scope.survey);
+        //console.log($scope.survey);
         $http.post('https://project-backend.herokuapp.com/v1/survey',$scope.survey).success(function(data) {
-          console.log("success");
-          window.location.href = '#/home'
+          //console.log("success");
+          //$scope.$emit("filterSurveys");
+          window.location.href = '#/home';          
         });
       }
 
       $scope.prueba = function(data){
-        console.log($scope.respuestas);
+        //console.log($scope.respuestas);
       }
 
 

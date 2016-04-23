@@ -4,7 +4,7 @@ angular.module('AngularScaffold.Controllers')
     $scope.currentSurvey = "";
 
 	$scope.prueba = function(){
-		console.log(RoleService.getSurveys());
+		//console.log(RoleService.getSurveys());
 	}
 
 	$scope.borrarEncuesta = function(){

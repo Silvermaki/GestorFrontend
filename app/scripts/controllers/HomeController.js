@@ -13,7 +13,8 @@ angular.module('AngularScaffold.Controllers')
       });
 
     $scope.$on("filterSurveys",function(){
-        console.log($localStorage.currentUser.scope);
+        //console.log($localStorage.currentUser.scope);
+        if($localStorage.currentUser){
         for(i=0;i<$scope.surveys.length; i++){
         permit = false;
         for(j=0;j<$localStorage.currentUser.scope.length; j++){
@@ -21,19 +22,20 @@ angular.module('AngularScaffold.Controllers')
             permit = true;
           }
         }
-        console.log($scope.surveys[i].tipo+" "+permit);
+        //console.log($scope.surveys[i].tipo+" "+permit);
         if(permit == false){
           $scope.surveys.splice(i,1);
         }
       }
-      console.log($scope.surveys);
+      //console.log($scope.surveys);
      $scope.$$phase || $scope.$apply();
-      
+      }
       });
       
   // update goes here
 
       $http.get('https://project-backend.herokuapp.com/v1/surveyModels').success(function(data) {
+        //console.log("get");
         $scope.temp = data;
         RoleService.setSurveys(data);
         //console.log(RoleService.getSurveys());
@@ -44,13 +46,13 @@ angular.module('AngularScaffold.Controllers')
         $scope.surveys = data;
         //console.log($scope.surveys);
         
-
+        $scope.$emit("filterSurveys");
         });
        
   //
       $scope.select = function(tipo,nombre){
-        console.log(tipo);
-        console.log(nombre);
+        //console.log(tipo);
+        //console.log(nombre);
         RoleService.setCurrentRole(tipo);
         RoleService.setCurrentNombre(nombre);
       }
